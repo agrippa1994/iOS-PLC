@@ -13,18 +13,7 @@
 		3CB4CF481B6FF89D00EBEFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */; };
 		3CB4CF4A1B6FF89D00EBEFEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */; };
 		3CB4CF4D1B6FF89D00EBEFEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */; };
-		3CB4CF591B6FF89D00EBEFEB /* PLCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF581B6FF89D00EBEFEB /* PLCTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3CB4CF531B6FF89D00EBEFEB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CB4CF321B6FF89D00EBEFEB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CB4CF391B6FF89D00EBEFEB;
-			remoteInfo = PLC;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3CB4CF3A1B6FF89D00EBEFEB /* PLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,20 +24,10 @@
 		3CB4CF471B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CB4CF4C1B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3CB4CF521B6FF89D00EBEFEB /* PLCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PLCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB4CF571B6FF89D00EBEFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB4CF581B6FF89D00EBEFEB /* PLCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLCTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3CB4CF371B6FF89D00EBEFEB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB4CF4F1B6FF89D00EBEFEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				3CB4CF3C1B6FF89D00EBEFEB /* PLC */,
-				3CB4CF551B6FF89D00EBEFEB /* PLCTests */,
 				3CB4CF3B1B6FF89D00EBEFEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				3CB4CF3A1B6FF89D00EBEFEB /* PLC.app */,
-				3CB4CF521B6FF89D00EBEFEB /* PLCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,23 +75,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3CB4CF551B6FF89D00EBEFEB /* PLCTests */ = {
-			isa = PBXGroup;
-			children = (
-				3CB4CF581B6FF89D00EBEFEB /* PLCTests.swift */,
-				3CB4CF561B6FF89D00EBEFEB /* Supporting Files */,
-			);
-			path = PLCTests;
-			sourceTree = "<group>";
-		};
-		3CB4CF561B6FF89D00EBEFEB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3CB4CF571B6FF89D00EBEFEB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,24 +95,6 @@
 			productReference = 3CB4CF3A1B6FF89D00EBEFEB /* PLC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3CB4CF511B6FF89D00EBEFEB /* PLCTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CB4CF5F1B6FF89D00EBEFEB /* Build configuration list for PBXNativeTarget "PLCTests" */;
-			buildPhases = (
-				3CB4CF4E1B6FF89D00EBEFEB /* Sources */,
-				3CB4CF4F1B6FF89D00EBEFEB /* Frameworks */,
-				3CB4CF501B6FF89D00EBEFEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3CB4CF541B6FF89D00EBEFEB /* PBXTargetDependency */,
-			);
-			name = PLCTests;
-			productName = PLCTests;
-			productReference = 3CB4CF521B6FF89D00EBEFEB /* PLCTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,10 +107,6 @@
 					3CB4CF391B6FF89D00EBEFEB = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					3CB4CF511B6FF89D00EBEFEB = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 3CB4CF391B6FF89D00EBEFEB;
-					};
 				};
 			};
 			buildConfigurationList = 3CB4CF351B6FF89D00EBEFEB /* Build configuration list for PBXProject "PLC" */;
@@ -176,7 +114,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 3CB4CF311B6FF89D00EBEFEB;
@@ -185,7 +122,6 @@
 			projectRoot = "";
 			targets = (
 				3CB4CF391B6FF89D00EBEFEB /* PLC */,
-				3CB4CF511B6FF89D00EBEFEB /* PLCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +134,6 @@
 				3CB4CF481B6FF89D00EBEFEB /* Main.storyboard in Resources */,
 				3CB4CF4D1B6FF89D00EBEFEB /* LaunchScreen.xib in Resources */,
 				3CB4CF4A1B6FF89D00EBEFEB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB4CF501B6FF89D00EBEFEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,23 +150,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CB4CF4E1B6FF89D00EBEFEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CB4CF591B6FF89D00EBEFEB /* PLCTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3CB4CF541B6FF89D00EBEFEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CB4CF391B6FF89D00EBEFEB /* PLC */;
-			targetProxy = 3CB4CF531B6FF89D00EBEFEB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */ = {
@@ -362,40 +275,6 @@
 			};
 			name = Release;
 		};
-		3CB4CF601B6FF89D00EBEFEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PLCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PLC.app/PLC";
-			};
-			name = Debug;
-		};
-		3CB4CF611B6FF89D00EBEFEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PLCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PLC.app/PLC";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,14 +294,7 @@
 				3CB4CF5E1B6FF89D00EBEFEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		3CB4CF5F1B6FF89D00EBEFEB /* Build configuration list for PBXNativeTarget "PLCTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CB4CF601B6FF89D00EBEFEB /* Debug */,
-				3CB4CF611B6FF89D00EBEFEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
