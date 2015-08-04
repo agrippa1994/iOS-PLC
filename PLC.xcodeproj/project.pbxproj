@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0BDDB91B713AB900726E95 /* s7_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDD991B713AB900726E95 /* s7_client.cpp */; };
+		3C0BDDBA1B713AB900726E95 /* s7_isotcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDD9C1B713AB900726E95 /* s7_isotcp.cpp */; };
+		3C0BDDBB1B713AB900726E95 /* s7_micro_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDD9E1B713AB900726E95 /* s7_micro_client.cpp */; };
+		3C0BDDBC1B713AB900726E95 /* s7_partner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA01B713AB900726E95 /* s7_partner.cpp */; };
+		3C0BDDBD1B713AB900726E95 /* s7_peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA21B713AB900726E95 /* s7_peer.cpp */; };
+		3C0BDDBE1B713AB900726E95 /* s7_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA41B713AB900726E95 /* s7_server.cpp */; };
+		3C0BDDBF1B713AB900726E95 /* s7_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA61B713AB900726E95 /* s7_text.cpp */; };
+		3C0BDDC01B713AB900726E95 /* snap7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA91B713AB900726E95 /* snap7.cpp */; };
+		3C0BDDC11B713AB900726E95 /* snap7_libmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDAB1B713AB900726E95 /* snap7_libmain.cpp */; };
+		3C0BDDC21B713AB900726E95 /* snap_msgsock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDAD1B713AB900726E95 /* snap_msgsock.cpp */; };
+		3C0BDDC31B713AB900726E95 /* snap_sysutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDB01B713AB900726E95 /* snap_sysutils.cpp */; };
+		3C0BDDC41B713AB900726E95 /* snap_tcpsrvr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDB21B713AB900726E95 /* snap_tcpsrvr.cpp */; };
+		3C0BDDC51B713AB900726E95 /* snap_threads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDB41B713AB900726E95 /* snap_threads.cpp */; };
+		3C0BDDC71B713BC000726E95 /* S7Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDC61B713BC000726E95 /* S7Client.swift */; };
 		3C22D9831B6FFB260054DCE1 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22D9821B6FFB260054DCE1 /* String+Localization.swift */; };
 		3C22D9871B6FFC4C0054DCE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */; };
 		3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */; };
@@ -18,6 +32,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0BDD651B713A8100726E95 /* PLC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PLC-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C0BDD991B713AB900726E95 /* s7_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_client.cpp; sourceTree = "<group>"; };
+		3C0BDD9A1B713AB900726E95 /* s7_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_client.h; sourceTree = "<group>"; };
+		3C0BDD9B1B713AB900726E95 /* s7_firmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_firmware.h; sourceTree = "<group>"; };
+		3C0BDD9C1B713AB900726E95 /* s7_isotcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_isotcp.cpp; sourceTree = "<group>"; };
+		3C0BDD9D1B713AB900726E95 /* s7_isotcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_isotcp.h; sourceTree = "<group>"; };
+		3C0BDD9E1B713AB900726E95 /* s7_micro_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_micro_client.cpp; sourceTree = "<group>"; };
+		3C0BDD9F1B713AB900726E95 /* s7_micro_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_micro_client.h; sourceTree = "<group>"; };
+		3C0BDDA01B713AB900726E95 /* s7_partner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_partner.cpp; sourceTree = "<group>"; };
+		3C0BDDA11B713AB900726E95 /* s7_partner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_partner.h; sourceTree = "<group>"; };
+		3C0BDDA21B713AB900726E95 /* s7_peer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_peer.cpp; sourceTree = "<group>"; };
+		3C0BDDA31B713AB900726E95 /* s7_peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_peer.h; sourceTree = "<group>"; };
+		3C0BDDA41B713AB900726E95 /* s7_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_server.cpp; sourceTree = "<group>"; };
+		3C0BDDA51B713AB900726E95 /* s7_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_server.h; sourceTree = "<group>"; };
+		3C0BDDA61B713AB900726E95 /* s7_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_text.cpp; sourceTree = "<group>"; };
+		3C0BDDA71B713AB900726E95 /* s7_text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_text.h; sourceTree = "<group>"; };
+		3C0BDDA81B713AB900726E95 /* s7_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_types.h; sourceTree = "<group>"; };
+		3C0BDDA91B713AB900726E95 /* snap7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap7.cpp; sourceTree = "<group>"; };
+		3C0BDDAA1B713AB900726E95 /* snap7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap7.h; sourceTree = "<group>"; };
+		3C0BDDAB1B713AB900726E95 /* snap7_libmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap7_libmain.cpp; sourceTree = "<group>"; };
+		3C0BDDAC1B713AB900726E95 /* snap7_libmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap7_libmain.h; sourceTree = "<group>"; };
+		3C0BDDAD1B713AB900726E95 /* snap_msgsock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_msgsock.cpp; sourceTree = "<group>"; };
+		3C0BDDAE1B713AB900726E95 /* snap_msgsock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_msgsock.h; sourceTree = "<group>"; };
+		3C0BDDAF1B713AB900726E95 /* snap_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_platform.h; sourceTree = "<group>"; };
+		3C0BDDB01B713AB900726E95 /* snap_sysutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_sysutils.cpp; sourceTree = "<group>"; };
+		3C0BDDB11B713AB900726E95 /* snap_sysutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_sysutils.h; sourceTree = "<group>"; };
+		3C0BDDB21B713AB900726E95 /* snap_tcpsrvr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_tcpsrvr.cpp; sourceTree = "<group>"; };
+		3C0BDDB31B713AB900726E95 /* snap_tcpsrvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_tcpsrvr.h; sourceTree = "<group>"; };
+		3C0BDDB41B713AB900726E95 /* snap_threads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_threads.cpp; sourceTree = "<group>"; };
+		3C0BDDB51B713AB900726E95 /* snap_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_threads.h; sourceTree = "<group>"; };
+		3C0BDDB61B713AB900726E95 /* sol_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sol_threads.h; sourceTree = "<group>"; };
+		3C0BDDB71B713AB900726E95 /* unix_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unix_threads.h; sourceTree = "<group>"; };
+		3C0BDDB81B713AB900726E95 /* win_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win_threads.h; sourceTree = "<group>"; };
+		3C0BDDC61B713BC000726E95 /* S7Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S7Client.swift; sourceTree = "<group>"; };
 		3C22D9821B6FFB260054DCE1 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		3C22D9861B6FFBF70054DCE1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		3C22D9881B6FFC4C0054DCE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -43,6 +91,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0BDD981B713AB900726E95 /* snap7 */ = {
+			isa = PBXGroup;
+			children = (
+				3C0BDD991B713AB900726E95 /* s7_client.cpp */,
+				3C0BDD9A1B713AB900726E95 /* s7_client.h */,
+				3C0BDD9B1B713AB900726E95 /* s7_firmware.h */,
+				3C0BDD9C1B713AB900726E95 /* s7_isotcp.cpp */,
+				3C0BDD9D1B713AB900726E95 /* s7_isotcp.h */,
+				3C0BDD9E1B713AB900726E95 /* s7_micro_client.cpp */,
+				3C0BDD9F1B713AB900726E95 /* s7_micro_client.h */,
+				3C0BDDA01B713AB900726E95 /* s7_partner.cpp */,
+				3C0BDDA11B713AB900726E95 /* s7_partner.h */,
+				3C0BDDA21B713AB900726E95 /* s7_peer.cpp */,
+				3C0BDDA31B713AB900726E95 /* s7_peer.h */,
+				3C0BDDA41B713AB900726E95 /* s7_server.cpp */,
+				3C0BDDA51B713AB900726E95 /* s7_server.h */,
+				3C0BDDA61B713AB900726E95 /* s7_text.cpp */,
+				3C0BDDA71B713AB900726E95 /* s7_text.h */,
+				3C0BDDA81B713AB900726E95 /* s7_types.h */,
+				3C0BDDA91B713AB900726E95 /* snap7.cpp */,
+				3C0BDDAA1B713AB900726E95 /* snap7.h */,
+				3C0BDDAB1B713AB900726E95 /* snap7_libmain.cpp */,
+				3C0BDDAC1B713AB900726E95 /* snap7_libmain.h */,
+				3C0BDDAD1B713AB900726E95 /* snap_msgsock.cpp */,
+				3C0BDDAE1B713AB900726E95 /* snap_msgsock.h */,
+				3C0BDDAF1B713AB900726E95 /* snap_platform.h */,
+				3C0BDDB01B713AB900726E95 /* snap_sysutils.cpp */,
+				3C0BDDB11B713AB900726E95 /* snap_sysutils.h */,
+				3C0BDDB21B713AB900726E95 /* snap_tcpsrvr.cpp */,
+				3C0BDDB31B713AB900726E95 /* snap_tcpsrvr.h */,
+				3C0BDDB41B713AB900726E95 /* snap_threads.cpp */,
+				3C0BDDB51B713AB900726E95 /* snap_threads.h */,
+				3C0BDDB61B713AB900726E95 /* sol_threads.h */,
+				3C0BDDB71B713AB900726E95 /* unix_threads.h */,
+				3C0BDDB81B713AB900726E95 /* win_threads.h */,
+			);
+			path = snap7;
+			sourceTree = "<group>";
+		};
 		3CB4CF311B6FF89D00EBEFEB = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +149,18 @@
 		3CB4CF3C1B6FF89D00EBEFEB /* PLC */ = {
 			isa = PBXGroup;
 			children = (
+				3C0BDD981B713AB900726E95 /* snap7 */,
+				3C0BDD651B713A8100726E95 /* PLC-Bridging-Header.h */,
+				3C0BDDC61B713BC000726E95 /* S7Client.swift */,
 				3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */,
 				3CB4CF441B6FF89D00EBEFEB /* ViewController.swift */,
-				3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */,
-				3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */,
-				3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */,
-				3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */,
-				3CB4CF3D1B6FF89D00EBEFEB /* Supporting Files */,
 				3C22D9821B6FFB260054DCE1 /* String+Localization.swift */,
+				3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */,
 				3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */,
+				3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */,
+				3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */,
+				3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */,
+				3CB4CF3D1B6FF89D00EBEFEB /* Supporting Files */,
 			);
 			path = PLC;
 			sourceTree = "<group>";
@@ -109,6 +199,7 @@
 		3CB4CF321B6FF89D00EBEFEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = mani1337;
 				TargetAttributes = {
@@ -154,9 +245,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0BDDBB1B713AB900726E95 /* s7_micro_client.cpp in Sources */,
+				3C0BDDBD1B713AB900726E95 /* s7_peer.cpp in Sources */,
+				3C0BDDC71B713BC000726E95 /* S7Client.swift in Sources */,
 				3CB4CF451B6FF89D00EBEFEB /* ViewController.swift in Sources */,
+				3C0BDDC11B713AB900726E95 /* snap7_libmain.cpp in Sources */,
+				3C0BDDBF1B713AB900726E95 /* s7_text.cpp in Sources */,
 				3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */,
+				3C0BDDC41B713AB900726E95 /* snap_tcpsrvr.cpp in Sources */,
+				3C0BDDC31B713AB900726E95 /* snap_sysutils.cpp in Sources */,
 				3CB4CF431B6FF89D00EBEFEB /* PLC.xcdatamodeld in Sources */,
+				3C0BDDBC1B713AB900726E95 /* s7_partner.cpp in Sources */,
+				3C0BDDC01B713AB900726E95 /* snap7.cpp in Sources */,
+				3C0BDDC51B713AB900726E95 /* snap_threads.cpp in Sources */,
+				3C0BDDC21B713AB900726E95 /* snap_msgsock.cpp in Sources */,
+				3C0BDDBE1B713AB900726E95 /* s7_server.cpp in Sources */,
+				3C0BDDBA1B713AB900726E95 /* s7_isotcp.cpp in Sources */,
+				3C0BDDB91B713AB900726E95 /* s7_client.cpp in Sources */,
 				3C22D9831B6FFB260054DCE1 /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,9 +385,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PLC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PLC/PLC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -290,9 +398,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PLC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PLC/PLC-Bridging-Header.h";
 			};
 			name = Release;
 		};
