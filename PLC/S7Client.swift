@@ -52,6 +52,46 @@ enum S7BlockLanguage: Int32 {
     case Graph
 }
 
+enum S7Error: longword {
+    case NegotiatingPDU         = 0x00100000;
+    case InvalidParams          = 0x00200000;
+    case JobPending             = 0x00300000;
+    case TooManyItems           = 0x00400000;
+    case InvalidWordLen         = 0x00500000;
+    case PartialDataWritten     = 0x00600000;
+    case SizeOverPDU            = 0x00700000;
+    case InvalidPlcAnswer       = 0x00800000;
+    case AddressOutOfRange      = 0x00900000;
+    case InvalidTransportSize   = 0x00A00000;
+    case WriteDataSizeMismatch  = 0x00B00000;
+    case ItemNotAvailable       = 0x00C00000;
+    case InvalidValue           = 0x00D00000;
+    case CannotStartPLC         = 0x00E00000;
+    case AlreadyRun             = 0x00F00000;
+    case CannotStopPLC          = 0x01000000;
+    case CannotCopyRamToRom     = 0x01100000;
+    case CannotCompress         = 0x01200000;
+    case AlreadyStop            = 0x01300000;
+    case FunNotAvailable        = 0x01400000;
+    case UploadSequenceFailed   = 0x01500000;
+    case InvalidDataSizeRecvd   = 0x01600000;
+    case InvalidBlockType       = 0x01700000;
+    case InvalidBlockNumber     = 0x01800000;
+    case InvalidBlockSize       = 0x01900000;
+    case DownloadSequenceFailed = 0x01A00000;
+    case InsertRefused          = 0x01B00000;
+    case DeleteRefused          = 0x01C00000;
+    case NeedPassword           = 0x01D00000;
+    case InvalidPassword        = 0x01E00000;
+    case NoPasswordToSetOrClear = 0x01F00000;
+    case JobTimeout             = 0x02000000;
+    case PartialDataRead        = 0x02100000;
+    case BufferTooSmall         = 0x02200000;
+    case FunctionRefused        = 0x02300000;
+    case Destroying             = 0x02400000;
+    case InvalidParamNumber     = 0x02500000;
+    case CannotChangeParam      = 0x02600000;
+}
 
 typealias S7BlockCount = TS7BlocksList
 
