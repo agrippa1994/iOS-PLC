@@ -25,10 +25,10 @@
 		3C22D9871B6FFC4C0054DCE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */; };
 		3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */; };
 		3CB4CF431B6FF89D00EBEFEB /* PLC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */; };
-		3CB4CF451B6FF89D00EBEFEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF441B6FF89D00EBEFEB /* ViewController.swift */; };
 		3CB4CF481B6FF89D00EBEFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */; };
 		3CB4CF4A1B6FF89D00EBEFEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */; };
 		3CB4CF4D1B6FF89D00EBEFEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */; };
+		3CF003641B73F62200D018AE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF003631B73F62200D018AE /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +74,10 @@
 		3CB4CF3E1B6FF89D00EBEFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CB4CF421B6FF89D00EBEFEB /* PLC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLC.xcdatamodel; sourceTree = "<group>"; };
-		3CB4CF441B6FF89D00EBEFEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CB4CF471B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CB4CF4C1B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3CF003631B73F62200D018AE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,6 @@
 				3C0BDD651B713A8100726E95 /* PLC-Bridging-Header.h */,
 				3C0BDDC61B713BC000726E95 /* S7Client.swift */,
 				3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */,
-				3CB4CF441B6FF89D00EBEFEB /* ViewController.swift */,
 				3C22D9821B6FFB260054DCE1 /* String+Localization.swift */,
 				3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */,
 				3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */,
@@ -161,6 +160,7 @@
 				3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */,
 				3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */,
 				3CB4CF3D1B6FF89D00EBEFEB /* Supporting Files */,
+				3CF003631B73F62200D018AE /* MainTabBarController.swift */,
 			);
 			path = PLC;
 			sourceTree = "<group>";
@@ -247,8 +247,8 @@
 			files = (
 				3C0BDDBB1B713AB900726E95 /* s7_micro_client.cpp in Sources */,
 				3C0BDDBD1B713AB900726E95 /* s7_peer.cpp in Sources */,
+				3CF003641B73F62200D018AE /* MainTabBarController.swift in Sources */,
 				3C0BDDC71B713BC000726E95 /* S7Client.swift in Sources */,
-				3CB4CF451B6FF89D00EBEFEB /* ViewController.swift in Sources */,
 				3C0BDDC11B713AB900726E95 /* snap7_libmain.cpp in Sources */,
 				3C0BDDBF1B713AB900726E95 /* s7_text.cpp in Sources */,
 				3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */,
