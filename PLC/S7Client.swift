@@ -97,9 +97,8 @@ typealias S7BlockCount = TS7BlocksList
 
 class S7Client {
     private let object = Cli_Create()
-    private let dispatchQueue = dispatch_queue_create("S7Client", DISPATCH_QUEUE_CONCURRENT)
-    private let lock = NSLock()
-    
+    private let dispatchQueue = dispatch_queue_create("S7Client", DISPATCH_QUEUE_SERIAL)
+
     private func async(handler: Void -> Void) {
         dispatch_async(self.dispatchQueue, handler)
     }

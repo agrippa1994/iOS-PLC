@@ -268,10 +268,15 @@ void TMsgSocket::SetSocketOptions()
 {
     int NoDelay = 1;
 	int KeepAlive = 1;
+    int Set = 1;
     LastTcpError=0;
-    SockCheck(setsockopt(FSocket, IPPROTO_TCP, TCP_NODELAY,(char*)&NoDelay, sizeof(NoDelay)));
 
-	if (LastTcpError==0)
+    SockCheck(setsockopt(FSocket, IPPROTO_TCP, TCP_NODELAY,(char*)&NoDelay, sizeof(NoDelay)));
+    
+    // We've to disable the SIGPIPE signal here because this kind of signal can't be fetched in Swift properly
+    setsockopt(FSocket, SOL_SOCKET, SO_NOSIGPIPE, (void *)&Set, sizeof(int));
+    
+    if (LastTcpError==0)
         SockCheck(setsockopt(FSocket, SOL_SOCKET, SO_KEEPALIVE,(char*)&KeepAlive, sizeof(KeepAlive)));
 }
 //---------------------------------------------------------------------------
