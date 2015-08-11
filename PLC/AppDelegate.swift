@@ -17,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let client = S7Client()
+        client.connect("localhost", rack: 0, slot: 2) {
+            NSLog("connect: %x", $0)
+            
+            client.read(.MK, number: 0, offset: 0, defaultValue: 0) {
+                NSLog("read %x", $1)
+            }
+            
+            client.numberOfBlocks {
+                NSLog("number %x", $1)
+            }
+        }
+
         return true
     }
 
