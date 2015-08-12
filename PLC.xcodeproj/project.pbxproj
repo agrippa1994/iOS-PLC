@@ -28,6 +28,10 @@
 		3CB4CF481B6FF89D00EBEFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */; };
 		3CB4CF4A1B6FF89D00EBEFEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */; };
 		3CB4CF4D1B6FF89D00EBEFEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */; };
+		3CD7AF1F1B7BC6CF0023369B /* ServerListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF1E1B7BC6CF0023369B /* ServerListTableTableViewController.swift */; };
+		3CD7AF2E1B7BDBC10023369B /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2A1B7BDBC10023369B /* CoreData.swift */; };
+		3CD7AF2F1B7BDBC10023369B /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2B1B7BDBC10023369B /* CoreDataHelpers.swift */; };
+		3CD7AF301B7BDBC10023369B /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2D1B7BDBC10023369B /* Server.swift */; };
 		3CF003641B73F62200D018AE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF003631B73F62200D018AE /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		3CB4CF471B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CB4CF4C1B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3CD7AF1E1B7BC6CF0023369B /* ServerListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListTableTableViewController.swift; sourceTree = "<group>"; };
+		3CD7AF2A1B7BDBC10023369B /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		3CD7AF2B1B7BDBC10023369B /* CoreDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		3CD7AF2D1B7BDBC10023369B /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		3CF003631B73F62200D018AE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +157,7 @@
 		3CB4CF3C1B6FF89D00EBEFEB /* PLC */ = {
 			isa = PBXGroup;
 			children = (
+				3CD7AF291B7BDBC10023369B /* CoreData */,
 				3C0BDD981B713AB900726E95 /* snap7 */,
 				3C0BDD651B713A8100726E95 /* PLC-Bridging-Header.h */,
 				3C0BDDC61B713BC000726E95 /* S7Client.swift */,
@@ -161,6 +170,7 @@
 				3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */,
 				3CB4CF3D1B6FF89D00EBEFEB /* Supporting Files */,
 				3CF003631B73F62200D018AE /* MainTabBarController.swift */,
+				3CD7AF1E1B7BC6CF0023369B /* ServerListTableTableViewController.swift */,
 			);
 			path = PLC;
 			sourceTree = "<group>";
@@ -171,6 +181,24 @@
 				3CB4CF3E1B6FF89D00EBEFEB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3CD7AF291B7BDBC10023369B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7AF2A1B7BDBC10023369B /* CoreData.swift */,
+				3CD7AF2B1B7BDBC10023369B /* CoreDataHelpers.swift */,
+				3CD7AF2C1B7BDBC10023369B /* Entities */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3CD7AF2C1B7BDBC10023369B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7AF2D1B7BDBC10023369B /* Server.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +277,9 @@
 				3C0BDDBD1B713AB900726E95 /* s7_peer.cpp in Sources */,
 				3CF003641B73F62200D018AE /* MainTabBarController.swift in Sources */,
 				3C0BDDC71B713BC000726E95 /* S7Client.swift in Sources */,
+				3CD7AF2E1B7BDBC10023369B /* CoreData.swift in Sources */,
 				3C0BDDC11B713AB900726E95 /* snap7_libmain.cpp in Sources */,
+				3CD7AF301B7BDBC10023369B /* Server.swift in Sources */,
 				3C0BDDBF1B713AB900726E95 /* s7_text.cpp in Sources */,
 				3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */,
 				3C0BDDC41B713AB900726E95 /* snap_tcpsrvr.cpp in Sources */,
@@ -262,6 +292,8 @@
 				3C0BDDBE1B713AB900726E95 /* s7_server.cpp in Sources */,
 				3C0BDDBA1B713AB900726E95 /* s7_isotcp.cpp in Sources */,
 				3C0BDDB91B713AB900726E95 /* s7_client.cpp in Sources */,
+				3CD7AF2F1B7BDBC10023369B /* CoreDataHelpers.swift in Sources */,
+				3CD7AF1F1B7BC6CF0023369B /* ServerListTableTableViewController.swift in Sources */,
 				3C22D9831B6FFB260054DCE1 /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

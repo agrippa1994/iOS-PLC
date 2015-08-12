@@ -24,6 +24,102 @@
             <point key="canvasLocation" x="263" y="-125"/>
         </scene>
         <!--Server List-->
+        <scene sceneID="9dg-uL-ibJ">
+            <objects>
+                <tableViewController id="yB1-hC-nE3" customClass="ServerListTableTableViewController" customModule="PLC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Zax-mG-Sp3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServerCell" id="rIX-9E-eA6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rIX-9E-eA6" id="c2j-2O-Pzk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fOg-QH-nbs" kind="show" id="TTP-On-wtJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yB1-hC-nE3" id="zsF-uQ-zWv"/>
+                            <outlet property="delegate" destination="yB1-hC-nE3" id="N2S-dd-1UI"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Server List" id="xVh-YT-8aJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="CFX-tG-VXT">
+                            <connections>
+                                <segue destination="fOg-QH-nbs" kind="show" id="ii0-6c-Au1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qou-ih-7bG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="671"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="zy4-jU-dcZ">
+            <objects>
+                <tableViewController id="fOg-QH-nbs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mz5-hD-AU7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="KMb-Jo-XLG">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4yk-05-dmY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4yk-05-dmY" id="GrH-TR-ifp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WFe-20-fpb">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WFe-20-fpb" id="tci-0G-N1M">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Cj-AF-Aip">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Cj-AF-Aip" id="UMG-KC-NZ2">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fOg-QH-nbs" id="sNl-Dz-as7"/>
+                            <outlet property="delegate" destination="fOg-QH-nbs" id="oBS-Cs-Ggb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nke-vE-Z1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="671"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hdf-nH-k7D">
+            <objects>
+                <navigationController id="n68-nv-GTP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ynl-4s-v10">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yB1-hC-nE3" kind="relationship" relationship="rootViewController" id="nab-cX-1Aj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SF1-tC-lfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545" y="671"/>
+        </scene>
+        <!--Server List-->
         <scene sceneID="voV-9t-tCl">
             <objects>
                 <tableViewController id="EH4-Tm-zcM" sceneMemberID="viewController">
@@ -85,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="263" y="-787"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="NaT-lI-WpZ">
             <objects>
-                <tabBarController id="E41-Xz-JKk" sceneMemberID="viewController">
+                <tabBarController id="E41-Xz-JKk" customClass="MainTabBarController" customModule="PLC" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FYI-FI-yzq"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -101,6 +197,7 @@
                         <segue destination="j6Z-Ae-Ffc" kind="relationship" relationship="viewControllers" id="PYp-Tj-A08"/>
                         <segue destination="3ea-rj-DlP" kind="relationship" relationship="viewControllers" id="VB2-gG-jyQ"/>
                         <segue destination="cy6-UT-Q4N" kind="presentation" identifier="ServerListTableViewController" id="m0H-4n-aw5"/>
+                        <segue destination="n68-nv-GTP" kind="presentation" identifier="ServerListNavigationController" id="tWw-Yx-AX3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezG-Ed-xLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,4 +205,7 @@
             <point key="canvasLocation" x="-545" y="-531"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TTP-On-wtJ"/>
+    </inferredMetricsTieBreakers>
 </document>
