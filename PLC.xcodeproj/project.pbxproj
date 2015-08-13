@@ -7,70 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C0BDDB91B713AB900726E95 /* s7_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDD991B713AB900726E95 /* s7_client.cpp */; };
-		3C0BDDBA1B713AB900726E95 /* s7_isotcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDD9C1B713AB900726E95 /* s7_isotcp.cpp */; };
-		3C0BDDBB1B713AB900726E95 /* s7_micro_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDD9E1B713AB900726E95 /* s7_micro_client.cpp */; };
-		3C0BDDBC1B713AB900726E95 /* s7_partner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA01B713AB900726E95 /* s7_partner.cpp */; };
-		3C0BDDBD1B713AB900726E95 /* s7_peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA21B713AB900726E95 /* s7_peer.cpp */; };
-		3C0BDDBE1B713AB900726E95 /* s7_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA41B713AB900726E95 /* s7_server.cpp */; };
-		3C0BDDBF1B713AB900726E95 /* s7_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA61B713AB900726E95 /* s7_text.cpp */; };
-		3C0BDDC01B713AB900726E95 /* snap7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDA91B713AB900726E95 /* snap7.cpp */; };
-		3C0BDDC11B713AB900726E95 /* snap7_libmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDAB1B713AB900726E95 /* snap7_libmain.cpp */; };
-		3C0BDDC21B713AB900726E95 /* snap_msgsock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDAD1B713AB900726E95 /* snap_msgsock.cpp */; };
-		3C0BDDC31B713AB900726E95 /* snap_sysutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDB01B713AB900726E95 /* snap_sysutils.cpp */; };
-		3C0BDDC41B713AB900726E95 /* snap_tcpsrvr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDB21B713AB900726E95 /* snap_tcpsrvr.cpp */; };
-		3C0BDDC51B713AB900726E95 /* snap_threads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDB41B713AB900726E95 /* snap_threads.cpp */; };
-		3C0BDDC71B713BC000726E95 /* S7Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0BDDC61B713BC000726E95 /* S7Client.swift */; };
-		3C22D9831B6FFB260054DCE1 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22D9821B6FFB260054DCE1 /* String+Localization.swift */; };
 		3C22D9871B6FFC4C0054DCE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */; };
 		3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */; };
 		3CB4CF431B6FF89D00EBEFEB /* PLC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */; };
 		3CB4CF481B6FF89D00EBEFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */; };
 		3CB4CF4A1B6FF89D00EBEFEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */; };
 		3CB4CF4D1B6FF89D00EBEFEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */; };
-		3CD7AF1F1B7BC6CF0023369B /* ServerListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF1E1B7BC6CF0023369B /* ServerListTableTableViewController.swift */; };
 		3CD7AF2E1B7BDBC10023369B /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2A1B7BDBC10023369B /* CoreData.swift */; };
 		3CD7AF2F1B7BDBC10023369B /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2B1B7BDBC10023369B /* CoreDataHelpers.swift */; };
 		3CD7AF301B7BDBC10023369B /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2D1B7BDBC10023369B /* Server.swift */; };
-		3CF003641B73F62200D018AE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF003631B73F62200D018AE /* MainTabBarController.swift */; };
+		3CD7AF341B7BDD2B0023369B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF321B7BDD2B0023369B /* MainTabBarController.swift */; };
+		3CD7AF351B7BDD2B0023369B /* ServerListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF331B7BDD2B0023369B /* ServerListTableTableViewController.swift */; };
+		3CD7AF391B7BDD570023369B /* S7Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF371B7BDD570023369B /* S7Client.swift */; };
+		3CD7AF3A1B7BDD570023369B /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF381B7BDD570023369B /* String+Localization.swift */; };
+		3CD7AF5C1B7BDDBA0023369B /* s7_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF3C1B7BDDB90023369B /* s7_client.cpp */; };
+		3CD7AF5D1B7BDDBA0023369B /* s7_isotcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF3F1B7BDDB90023369B /* s7_isotcp.cpp */; };
+		3CD7AF5E1B7BDDBA0023369B /* s7_micro_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF411B7BDDB90023369B /* s7_micro_client.cpp */; };
+		3CD7AF5F1B7BDDBA0023369B /* s7_partner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF431B7BDDB90023369B /* s7_partner.cpp */; };
+		3CD7AF601B7BDDBA0023369B /* s7_peer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF451B7BDDB90023369B /* s7_peer.cpp */; };
+		3CD7AF611B7BDDBA0023369B /* s7_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF471B7BDDB90023369B /* s7_server.cpp */; };
+		3CD7AF621B7BDDBA0023369B /* s7_text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF491B7BDDB90023369B /* s7_text.cpp */; };
+		3CD7AF631B7BDDBA0023369B /* snap7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF4C1B7BDDB90023369B /* snap7.cpp */; };
+		3CD7AF641B7BDDBA0023369B /* snap7_libmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF4E1B7BDDB90023369B /* snap7_libmain.cpp */; };
+		3CD7AF651B7BDDBA0023369B /* snap_msgsock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF501B7BDDB90023369B /* snap_msgsock.cpp */; };
+		3CD7AF661B7BDDBA0023369B /* snap_sysutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF531B7BDDBA0023369B /* snap_sysutils.cpp */; };
+		3CD7AF671B7BDDBA0023369B /* snap_tcpsrvr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF551B7BDDBA0023369B /* snap_tcpsrvr.cpp */; };
+		3CD7AF681B7BDDBA0023369B /* snap_threads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF571B7BDDBA0023369B /* snap_threads.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C0BDD651B713A8100726E95 /* PLC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PLC-Bridging-Header.h"; sourceTree = "<group>"; };
-		3C0BDD991B713AB900726E95 /* s7_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_client.cpp; sourceTree = "<group>"; };
-		3C0BDD9A1B713AB900726E95 /* s7_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_client.h; sourceTree = "<group>"; };
-		3C0BDD9B1B713AB900726E95 /* s7_firmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_firmware.h; sourceTree = "<group>"; };
-		3C0BDD9C1B713AB900726E95 /* s7_isotcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_isotcp.cpp; sourceTree = "<group>"; };
-		3C0BDD9D1B713AB900726E95 /* s7_isotcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_isotcp.h; sourceTree = "<group>"; };
-		3C0BDD9E1B713AB900726E95 /* s7_micro_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_micro_client.cpp; sourceTree = "<group>"; };
-		3C0BDD9F1B713AB900726E95 /* s7_micro_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_micro_client.h; sourceTree = "<group>"; };
-		3C0BDDA01B713AB900726E95 /* s7_partner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_partner.cpp; sourceTree = "<group>"; };
-		3C0BDDA11B713AB900726E95 /* s7_partner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_partner.h; sourceTree = "<group>"; };
-		3C0BDDA21B713AB900726E95 /* s7_peer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_peer.cpp; sourceTree = "<group>"; };
-		3C0BDDA31B713AB900726E95 /* s7_peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_peer.h; sourceTree = "<group>"; };
-		3C0BDDA41B713AB900726E95 /* s7_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_server.cpp; sourceTree = "<group>"; };
-		3C0BDDA51B713AB900726E95 /* s7_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_server.h; sourceTree = "<group>"; };
-		3C0BDDA61B713AB900726E95 /* s7_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_text.cpp; sourceTree = "<group>"; };
-		3C0BDDA71B713AB900726E95 /* s7_text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_text.h; sourceTree = "<group>"; };
-		3C0BDDA81B713AB900726E95 /* s7_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_types.h; sourceTree = "<group>"; };
-		3C0BDDA91B713AB900726E95 /* snap7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap7.cpp; sourceTree = "<group>"; };
-		3C0BDDAA1B713AB900726E95 /* snap7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap7.h; sourceTree = "<group>"; };
-		3C0BDDAB1B713AB900726E95 /* snap7_libmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap7_libmain.cpp; sourceTree = "<group>"; };
-		3C0BDDAC1B713AB900726E95 /* snap7_libmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap7_libmain.h; sourceTree = "<group>"; };
-		3C0BDDAD1B713AB900726E95 /* snap_msgsock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_msgsock.cpp; sourceTree = "<group>"; };
-		3C0BDDAE1B713AB900726E95 /* snap_msgsock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_msgsock.h; sourceTree = "<group>"; };
-		3C0BDDAF1B713AB900726E95 /* snap_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_platform.h; sourceTree = "<group>"; };
-		3C0BDDB01B713AB900726E95 /* snap_sysutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_sysutils.cpp; sourceTree = "<group>"; };
-		3C0BDDB11B713AB900726E95 /* snap_sysutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_sysutils.h; sourceTree = "<group>"; };
-		3C0BDDB21B713AB900726E95 /* snap_tcpsrvr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_tcpsrvr.cpp; sourceTree = "<group>"; };
-		3C0BDDB31B713AB900726E95 /* snap_tcpsrvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_tcpsrvr.h; sourceTree = "<group>"; };
-		3C0BDDB41B713AB900726E95 /* snap_threads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_threads.cpp; sourceTree = "<group>"; };
-		3C0BDDB51B713AB900726E95 /* snap_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_threads.h; sourceTree = "<group>"; };
-		3C0BDDB61B713AB900726E95 /* sol_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sol_threads.h; sourceTree = "<group>"; };
-		3C0BDDB71B713AB900726E95 /* unix_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unix_threads.h; sourceTree = "<group>"; };
-		3C0BDDB81B713AB900726E95 /* win_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win_threads.h; sourceTree = "<group>"; };
-		3C0BDDC61B713BC000726E95 /* S7Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S7Client.swift; sourceTree = "<group>"; };
-		3C22D9821B6FFB260054DCE1 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		3C22D9861B6FFBF70054DCE1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		3C22D9881B6FFC4C0054DCE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3C22D98A1B6FFC4E0054DCE1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -81,11 +47,45 @@
 		3CB4CF471B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CB4CF4C1B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3CD7AF1E1B7BC6CF0023369B /* ServerListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListTableTableViewController.swift; sourceTree = "<group>"; };
 		3CD7AF2A1B7BDBC10023369B /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		3CD7AF2B1B7BDBC10023369B /* CoreDataHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		3CD7AF2D1B7BDBC10023369B /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
-		3CF003631B73F62200D018AE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3CD7AF321B7BDD2B0023369B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3CD7AF331B7BDD2B0023369B /* ServerListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerListTableTableViewController.swift; sourceTree = "<group>"; };
+		3CD7AF371B7BDD570023369B /* S7Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S7Client.swift; sourceTree = "<group>"; };
+		3CD7AF381B7BDD570023369B /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		3CD7AF3C1B7BDDB90023369B /* s7_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_client.cpp; sourceTree = "<group>"; };
+		3CD7AF3D1B7BDDB90023369B /* s7_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_client.h; sourceTree = "<group>"; };
+		3CD7AF3E1B7BDDB90023369B /* s7_firmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_firmware.h; sourceTree = "<group>"; };
+		3CD7AF3F1B7BDDB90023369B /* s7_isotcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_isotcp.cpp; sourceTree = "<group>"; };
+		3CD7AF401B7BDDB90023369B /* s7_isotcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_isotcp.h; sourceTree = "<group>"; };
+		3CD7AF411B7BDDB90023369B /* s7_micro_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_micro_client.cpp; sourceTree = "<group>"; };
+		3CD7AF421B7BDDB90023369B /* s7_micro_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_micro_client.h; sourceTree = "<group>"; };
+		3CD7AF431B7BDDB90023369B /* s7_partner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_partner.cpp; sourceTree = "<group>"; };
+		3CD7AF441B7BDDB90023369B /* s7_partner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_partner.h; sourceTree = "<group>"; };
+		3CD7AF451B7BDDB90023369B /* s7_peer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_peer.cpp; sourceTree = "<group>"; };
+		3CD7AF461B7BDDB90023369B /* s7_peer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_peer.h; sourceTree = "<group>"; };
+		3CD7AF471B7BDDB90023369B /* s7_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_server.cpp; sourceTree = "<group>"; };
+		3CD7AF481B7BDDB90023369B /* s7_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_server.h; sourceTree = "<group>"; };
+		3CD7AF491B7BDDB90023369B /* s7_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s7_text.cpp; sourceTree = "<group>"; };
+		3CD7AF4A1B7BDDB90023369B /* s7_text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_text.h; sourceTree = "<group>"; };
+		3CD7AF4B1B7BDDB90023369B /* s7_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s7_types.h; sourceTree = "<group>"; };
+		3CD7AF4C1B7BDDB90023369B /* snap7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap7.cpp; sourceTree = "<group>"; };
+		3CD7AF4D1B7BDDB90023369B /* snap7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap7.h; sourceTree = "<group>"; };
+		3CD7AF4E1B7BDDB90023369B /* snap7_libmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap7_libmain.cpp; sourceTree = "<group>"; };
+		3CD7AF4F1B7BDDB90023369B /* snap7_libmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap7_libmain.h; sourceTree = "<group>"; };
+		3CD7AF501B7BDDB90023369B /* snap_msgsock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_msgsock.cpp; sourceTree = "<group>"; };
+		3CD7AF511B7BDDBA0023369B /* snap_msgsock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_msgsock.h; sourceTree = "<group>"; };
+		3CD7AF521B7BDDBA0023369B /* snap_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_platform.h; sourceTree = "<group>"; };
+		3CD7AF531B7BDDBA0023369B /* snap_sysutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_sysutils.cpp; sourceTree = "<group>"; };
+		3CD7AF541B7BDDBA0023369B /* snap_sysutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_sysutils.h; sourceTree = "<group>"; };
+		3CD7AF551B7BDDBA0023369B /* snap_tcpsrvr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_tcpsrvr.cpp; sourceTree = "<group>"; };
+		3CD7AF561B7BDDBA0023369B /* snap_tcpsrvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_tcpsrvr.h; sourceTree = "<group>"; };
+		3CD7AF571B7BDDBA0023369B /* snap_threads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snap_threads.cpp; sourceTree = "<group>"; };
+		3CD7AF581B7BDDBA0023369B /* snap_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snap_threads.h; sourceTree = "<group>"; };
+		3CD7AF591B7BDDBA0023369B /* sol_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sol_threads.h; sourceTree = "<group>"; };
+		3CD7AF5A1B7BDDBA0023369B /* unix_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unix_threads.h; sourceTree = "<group>"; };
+		3CD7AF5B1B7BDDBA0023369B /* win_threads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win_threads.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,45 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C0BDD981B713AB900726E95 /* snap7 */ = {
-			isa = PBXGroup;
-			children = (
-				3C0BDD991B713AB900726E95 /* s7_client.cpp */,
-				3C0BDD9A1B713AB900726E95 /* s7_client.h */,
-				3C0BDD9B1B713AB900726E95 /* s7_firmware.h */,
-				3C0BDD9C1B713AB900726E95 /* s7_isotcp.cpp */,
-				3C0BDD9D1B713AB900726E95 /* s7_isotcp.h */,
-				3C0BDD9E1B713AB900726E95 /* s7_micro_client.cpp */,
-				3C0BDD9F1B713AB900726E95 /* s7_micro_client.h */,
-				3C0BDDA01B713AB900726E95 /* s7_partner.cpp */,
-				3C0BDDA11B713AB900726E95 /* s7_partner.h */,
-				3C0BDDA21B713AB900726E95 /* s7_peer.cpp */,
-				3C0BDDA31B713AB900726E95 /* s7_peer.h */,
-				3C0BDDA41B713AB900726E95 /* s7_server.cpp */,
-				3C0BDDA51B713AB900726E95 /* s7_server.h */,
-				3C0BDDA61B713AB900726E95 /* s7_text.cpp */,
-				3C0BDDA71B713AB900726E95 /* s7_text.h */,
-				3C0BDDA81B713AB900726E95 /* s7_types.h */,
-				3C0BDDA91B713AB900726E95 /* snap7.cpp */,
-				3C0BDDAA1B713AB900726E95 /* snap7.h */,
-				3C0BDDAB1B713AB900726E95 /* snap7_libmain.cpp */,
-				3C0BDDAC1B713AB900726E95 /* snap7_libmain.h */,
-				3C0BDDAD1B713AB900726E95 /* snap_msgsock.cpp */,
-				3C0BDDAE1B713AB900726E95 /* snap_msgsock.h */,
-				3C0BDDAF1B713AB900726E95 /* snap_platform.h */,
-				3C0BDDB01B713AB900726E95 /* snap_sysutils.cpp */,
-				3C0BDDB11B713AB900726E95 /* snap_sysutils.h */,
-				3C0BDDB21B713AB900726E95 /* snap_tcpsrvr.cpp */,
-				3C0BDDB31B713AB900726E95 /* snap_tcpsrvr.h */,
-				3C0BDDB41B713AB900726E95 /* snap_threads.cpp */,
-				3C0BDDB51B713AB900726E95 /* snap_threads.h */,
-				3C0BDDB61B713AB900726E95 /* sol_threads.h */,
-				3C0BDDB71B713AB900726E95 /* unix_threads.h */,
-				3C0BDDB81B713AB900726E95 /* win_threads.h */,
-			);
-			path = snap7;
-			sourceTree = "<group>";
-		};
 		3CB4CF311B6FF89D00EBEFEB = {
 			isa = PBXGroup;
 			children = (
@@ -157,35 +118,31 @@
 		3CB4CF3C1B6FF89D00EBEFEB /* PLC */ = {
 			isa = PBXGroup;
 			children = (
-				3CD7AF291B7BDBC10023369B /* CoreData */,
-				3C0BDD981B713AB900726E95 /* snap7 */,
 				3C0BDD651B713A8100726E95 /* PLC-Bridging-Header.h */,
-				3C0BDDC61B713BC000726E95 /* S7Client.swift */,
 				3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */,
-				3C22D9821B6FFB260054DCE1 /* String+Localization.swift */,
-				3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */,
-				3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */,
-				3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */,
-				3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */,
-				3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */,
-				3CB4CF3D1B6FF89D00EBEFEB /* Supporting Files */,
-				3CF003631B73F62200D018AE /* MainTabBarController.swift */,
-				3CD7AF1E1B7BC6CF0023369B /* ServerListTableTableViewController.swift */,
+				3CD7AF3B1B7BDDB90023369B /* SNAP7 */,
+				3CD7AF361B7BDD570023369B /* Core */,
+				3CD7AF311B7BDD2B0023369B /* ViewControllers */,
+				3CD7AF291B7BDBC10023369B /* CoreData */,
+				3CB4CF3D1B6FF89D00EBEFEB /* Resources */,
 			);
 			path = PLC;
 			sourceTree = "<group>";
 		};
-		3CB4CF3D1B6FF89D00EBEFEB /* Supporting Files */ = {
+		3CB4CF3D1B6FF89D00EBEFEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */,
+				3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */,
 				3CB4CF3E1B6FF89D00EBEFEB /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		3CD7AF291B7BDBC10023369B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3CB4CF411B6FF89D00EBEFEB /* PLC.xcdatamodeld */,
 				3CD7AF2A1B7BDBC10023369B /* CoreData.swift */,
 				3CD7AF2B1B7BDBC10023369B /* CoreDataHelpers.swift */,
 				3CD7AF2C1B7BDBC10023369B /* Entities */,
@@ -199,6 +156,65 @@
 				3CD7AF2D1B7BDBC10023369B /* Server.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		3CD7AF311B7BDD2B0023369B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */,
+				3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */,
+				3CD7AF321B7BDD2B0023369B /* MainTabBarController.swift */,
+				3CD7AF331B7BDD2B0023369B /* ServerListTableTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3CD7AF361B7BDD570023369B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7AF371B7BDD570023369B /* S7Client.swift */,
+				3CD7AF381B7BDD570023369B /* String+Localization.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3CD7AF3B1B7BDDB90023369B /* SNAP7 */ = {
+			isa = PBXGroup;
+			children = (
+				3CD7AF3C1B7BDDB90023369B /* s7_client.cpp */,
+				3CD7AF3D1B7BDDB90023369B /* s7_client.h */,
+				3CD7AF3E1B7BDDB90023369B /* s7_firmware.h */,
+				3CD7AF3F1B7BDDB90023369B /* s7_isotcp.cpp */,
+				3CD7AF401B7BDDB90023369B /* s7_isotcp.h */,
+				3CD7AF411B7BDDB90023369B /* s7_micro_client.cpp */,
+				3CD7AF421B7BDDB90023369B /* s7_micro_client.h */,
+				3CD7AF431B7BDDB90023369B /* s7_partner.cpp */,
+				3CD7AF441B7BDDB90023369B /* s7_partner.h */,
+				3CD7AF451B7BDDB90023369B /* s7_peer.cpp */,
+				3CD7AF461B7BDDB90023369B /* s7_peer.h */,
+				3CD7AF471B7BDDB90023369B /* s7_server.cpp */,
+				3CD7AF481B7BDDB90023369B /* s7_server.h */,
+				3CD7AF491B7BDDB90023369B /* s7_text.cpp */,
+				3CD7AF4A1B7BDDB90023369B /* s7_text.h */,
+				3CD7AF4B1B7BDDB90023369B /* s7_types.h */,
+				3CD7AF4C1B7BDDB90023369B /* snap7.cpp */,
+				3CD7AF4D1B7BDDB90023369B /* snap7.h */,
+				3CD7AF4E1B7BDDB90023369B /* snap7_libmain.cpp */,
+				3CD7AF4F1B7BDDB90023369B /* snap7_libmain.h */,
+				3CD7AF501B7BDDB90023369B /* snap_msgsock.cpp */,
+				3CD7AF511B7BDDBA0023369B /* snap_msgsock.h */,
+				3CD7AF521B7BDDBA0023369B /* snap_platform.h */,
+				3CD7AF531B7BDDBA0023369B /* snap_sysutils.cpp */,
+				3CD7AF541B7BDDBA0023369B /* snap_sysutils.h */,
+				3CD7AF551B7BDDBA0023369B /* snap_tcpsrvr.cpp */,
+				3CD7AF561B7BDDBA0023369B /* snap_tcpsrvr.h */,
+				3CD7AF571B7BDDBA0023369B /* snap_threads.cpp */,
+				3CD7AF581B7BDDBA0023369B /* snap_threads.h */,
+				3CD7AF591B7BDDBA0023369B /* sol_threads.h */,
+				3CD7AF5A1B7BDDBA0023369B /* unix_threads.h */,
+				3CD7AF5B1B7BDDBA0023369B /* win_threads.h */,
+			);
+			path = SNAP7;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,28 +289,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0BDDBB1B713AB900726E95 /* s7_micro_client.cpp in Sources */,
-				3C0BDDBD1B713AB900726E95 /* s7_peer.cpp in Sources */,
-				3CF003641B73F62200D018AE /* MainTabBarController.swift in Sources */,
-				3C0BDDC71B713BC000726E95 /* S7Client.swift in Sources */,
 				3CD7AF2E1B7BDBC10023369B /* CoreData.swift in Sources */,
-				3C0BDDC11B713AB900726E95 /* snap7_libmain.cpp in Sources */,
+				3CD7AF681B7BDDBA0023369B /* snap_threads.cpp in Sources */,
+				3CD7AF351B7BDD2B0023369B /* ServerListTableTableViewController.swift in Sources */,
 				3CD7AF301B7BDBC10023369B /* Server.swift in Sources */,
-				3C0BDDBF1B713AB900726E95 /* s7_text.cpp in Sources */,
 				3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */,
-				3C0BDDC41B713AB900726E95 /* snap_tcpsrvr.cpp in Sources */,
-				3C0BDDC31B713AB900726E95 /* snap_sysutils.cpp in Sources */,
+				3CD7AF391B7BDD570023369B /* S7Client.swift in Sources */,
+				3CD7AF631B7BDDBA0023369B /* snap7.cpp in Sources */,
+				3CD7AF601B7BDDBA0023369B /* s7_peer.cpp in Sources */,
+				3CD7AF611B7BDDBA0023369B /* s7_server.cpp in Sources */,
+				3CD7AF5D1B7BDDBA0023369B /* s7_isotcp.cpp in Sources */,
+				3CD7AF671B7BDDBA0023369B /* snap_tcpsrvr.cpp in Sources */,
 				3CB4CF431B6FF89D00EBEFEB /* PLC.xcdatamodeld in Sources */,
-				3C0BDDBC1B713AB900726E95 /* s7_partner.cpp in Sources */,
-				3C0BDDC01B713AB900726E95 /* snap7.cpp in Sources */,
-				3C0BDDC51B713AB900726E95 /* snap_threads.cpp in Sources */,
-				3C0BDDC21B713AB900726E95 /* snap_msgsock.cpp in Sources */,
-				3C0BDDBE1B713AB900726E95 /* s7_server.cpp in Sources */,
-				3C0BDDBA1B713AB900726E95 /* s7_isotcp.cpp in Sources */,
-				3C0BDDB91B713AB900726E95 /* s7_client.cpp in Sources */,
+				3CD7AF651B7BDDBA0023369B /* snap_msgsock.cpp in Sources */,
+				3CD7AF661B7BDDBA0023369B /* snap_sysutils.cpp in Sources */,
+				3CD7AF3A1B7BDD570023369B /* String+Localization.swift in Sources */,
+				3CD7AF621B7BDDBA0023369B /* s7_text.cpp in Sources */,
+				3CD7AF341B7BDD2B0023369B /* MainTabBarController.swift in Sources */,
+				3CD7AF5E1B7BDDBA0023369B /* s7_micro_client.cpp in Sources */,
+				3CD7AF5C1B7BDDBA0023369B /* s7_client.cpp in Sources */,
 				3CD7AF2F1B7BDBC10023369B /* CoreDataHelpers.swift in Sources */,
-				3CD7AF1F1B7BC6CF0023369B /* ServerListTableTableViewController.swift in Sources */,
-				3C22D9831B6FFB260054DCE1 /* String+Localization.swift in Sources */,
+				3CD7AF641B7BDDBA0023369B /* snap7_libmain.cpp in Sources */,
+				3CD7AF5F1B7BDDBA0023369B /* s7_partner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +333,7 @@
 				3C22D9861B6FFBF70054DCE1 /* de */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */ = {
@@ -325,6 +342,7 @@
 				3CB4CF4C1B6FF89D00EBEFEB /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -468,7 +486,8 @@
 				3CB4CF421B6FF89D00EBEFEB /* PLC.xcdatamodel */,
 			);
 			currentVersion = 3CB4CF421B6FF89D00EBEFEB /* PLC.xcdatamodel */;
-			path = PLC.xcdatamodeld;
+			name = PLC.xcdatamodeld;
+			path = ../PLC.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
