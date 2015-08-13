@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.performSegueWithIdentifier("ServerListNavigationController", sender: self)
+        //self.performSegueWithIdentifier("ServerListNavigationController", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

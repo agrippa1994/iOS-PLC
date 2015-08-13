@@ -20,10 +20,13 @@ class CoreData {
         return sharedCoreData!
     }
     
+    let servers = IndexableEntityHelper<Server>(name: "Server")
+    
     private init() {
         
     }
     
-    let servers = IndexableEntityHelper<Server>(name: "Server")
-    
+    func save() {
+        AppDelegate.singleton.saveContext()
+    }
 }

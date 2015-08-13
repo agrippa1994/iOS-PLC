@@ -9,13 +9,15 @@
 import Foundation
 import CoreData
 
+@objc(Server)
+
 class Server: NSManagedObject, Indexable {
 
-    @NSManaged var host: String
+    @NSManaged var host: String!
     @NSManaged var index: NSNumber
     @NSManaged var connectionType: NSNumber
     @NSManaged var rack: NSNumber
     @NSManaged var slot: NSNumber
-    @NSManaged var name: String
+    @NSManaged var name: String!
 
 }

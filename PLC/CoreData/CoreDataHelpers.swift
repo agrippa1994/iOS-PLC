@@ -11,7 +11,7 @@ import CoreData
 
 // Each Core Data class with an index has to implement this protocol
 protocol Indexable {
-    var index: NSNumber { get }
+    var index: NSNumber { get set }
 }
 
 // This helper class helps the client to store and fetch data from Core Data
@@ -32,10 +32,10 @@ class EntityHelper<T where T: NSManagedObject> {
         return []
     }
     
-    func create() -> T? {
+    func create(shouldSave: Bool = false) -> T? {
         if let ctx = AppDelegate.singleton.managedObjectContext {
             if let desc = NSEntityDescription.entityForName(self.name, inManagedObjectContext: ctx) {
-                return NSManagedObject(entity: desc, insertIntoManagedObjectContext: nil) as? T
+                return NSManagedObject(entity: desc, insertIntoManagedObjectContext: shouldSave ? ctx : nil) as? T
             }
         }
         
@@ -68,8 +68,26 @@ class IndexableEntityHelper<T where T: NSManagedObject, T: Indexable>: EntityHel
     }
     
     override func all() -> [T] {
-        return super.all().sorted {
+        let sorted = super.all().sorted {
             return $0.index.compare($1.index) == NSComparisonResult.OrderedAscending
         }
+        
+        for var i = 0; i < sorted.count; i++ {
+            sorted[i].index = NSNumber(integer: i)
+            
+        }
+        
+        return sorted
+    }
+    
+    func move(fromIndex: Int, toIndex: Int) -> [T] {
+        var data = self.all()
+        data.move(fromIndex, toIndex: toIndex)
+        
+        for var i = 0; i < data.count; i++ {
+            data[i].index = NSNumber(integer: i)
+        }
+        
+        return data
     }
 }

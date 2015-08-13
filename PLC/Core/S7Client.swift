@@ -21,6 +21,17 @@ enum S7ConnectionType: word {
     case PG = 1
     case OP
     case Basic
+    
+    var localizedString: String {
+        switch self {
+        case .PG:
+            return "S7CONNECTIONTYPE_PG".localized
+        case .OP:
+            return "S7CONNECTIONTYPE_OP".localized
+        case .Basic:
+            return "S7CONNECTIONTYPE_BASIC".localized
+        }
+    }
 }
 
 enum S7WordLength: Int32 {

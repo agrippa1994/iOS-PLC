@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ServerListTableTableViewController: UITableViewController {
-
+class ServerListTableViewController: UITableViewController {
     var servers: [Server] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        let svr = CoreData.coreData.servers.create()
-        NSLog("%@", svr!)
-        
+        self.navigationController?.setToolbarHidden(false, animated: false)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.reload()
     }
 
@@ -35,7 +35,8 @@ class ServerListTableTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ServerCell", forIndexPath: indexPath) as! UITableViewCell
 
-        // Configure the cell...
+        cell.textLabel?.text = self.servers[indexPath.row].name
+        cell.detailTextLabel?.text = self.servers[indexPath.row].host
 
         return cell
     }
@@ -47,12 +48,15 @@ class ServerListTableTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            CoreData.coreData.servers.remove(self.servers[indexPath.row])
+            self.servers = CoreData.coreData.servers.all()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
     
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+        CoreData.coreData.servers.move(fromIndexPath.row, toIndex: toIndexPath.row)
+        self.reload()
     }
 
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -60,8 +64,16 @@ class ServerListTableTableViewController: UITableViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "EditServer" || segue.identifier == "AddServer" {
+            let server: Server
+            if segue.identifier == "EditServer" {
+                server = self.servers[self.tableView.indexPathForCell(sender as! UITableViewCell)!.row]
+            } else {
+                server = CoreData.coreData.servers.create(shouldSave: true)!
+            }
+            
+            (segue.destinationViewController as! EditServerTableViewController).server = server
+        }
     }
     
     func reload() {

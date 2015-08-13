@@ -5,3 +5,9 @@
   Created by Manuel Stampfl on 03.08.15.
   Copyright (c) 2015 mani1337. All rights reserved.
 */
+
+"S7CONNECTIONTYPE_PG" = "PG";
+
+"S7CONNECTIONTYPE_OP" = "OP";
+
+"S7CONNECTIONTYPE_BASIC" = "Basic";
