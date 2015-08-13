@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Server" representedClassName="PRODUCT_MODULE_NAME.Server" syncable="YES">
+    <entity name="Server" representedClassName="Server" syncable="YES">
         <attribute name="connectionType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="host" attributeType="String" syncable="YES"/>
         <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="-1" indexed="YES" syncable="YES"/>
@@ -9,6 +9,6 @@
         <attribute name="slot" optional="YES" attributeType="Integer 32" defaultValueString="2" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Server" positionX="-10386" positionY="-3969" width="128" height="133"/>
+        <element name="Server" positionX="-10386" positionY="-3969" width="128" height="135"/>
     </elements>
 </model>
