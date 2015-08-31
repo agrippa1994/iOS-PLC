@@ -24,8 +24,8 @@ class EntityHelper<T where T: NSManagedObject> {
     
     func all() -> [T] {
         if let ctx = AppDelegate.singleton.managedObjectContext {
-            if let data = ctx.executeFetchRequest(NSFetchRequest(entityName: self.name), error: nil) as? [T] {
-                return data
+            if let data = try? ctx.executeFetchRequest(NSFetchRequest(entityName: self.name)) as? [T] {
+                return data!
             }
         }
         
@@ -68,13 +68,12 @@ class IndexableEntityHelper<T where T: NSManagedObject, T: Indexable>: EntityHel
     }
     
     override func all() -> [T] {
-        let sorted = super.all().sorted {
+        var sorted = super.all().sort {
             return $0.index.compare($1.index) == NSComparisonResult.OrderedAscending
         }
         
         for var i = 0; i < sorted.count; i++ {
             sorted[i].index = NSNumber(integer: i)
-            
         }
         
         return sorted

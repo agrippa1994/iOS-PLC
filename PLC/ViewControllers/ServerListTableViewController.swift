@@ -33,7 +33,7 @@ class ServerListTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ServerCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ServerCell", forIndexPath: indexPath) 
 
         cell.textLabel?.text = self.servers[indexPath.row].name
         cell.detailTextLabel?.text = self.servers[indexPath.row].host
@@ -69,7 +69,7 @@ class ServerListTableViewController: UITableViewController {
             if segue.identifier == "EditServer" {
                 server = self.servers[self.tableView.indexPathForCell(sender as! UITableViewCell)!.row]
             } else {
-                server = CoreData.coreData.servers.create(shouldSave: true)!
+                server = CoreData.coreData.servers.create(true)!
             }
             
             (segue.destinationViewController as! EditServerTableViewController).server = server
