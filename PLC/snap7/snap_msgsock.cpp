@@ -167,7 +167,7 @@ void TMsgSocket::Purge()
         if (CanRead(0)) {
            do
            {
-               Read=recv(FSocket, Trash, 512, MSG_NOSIGNAL );
+               Read=(int)recv(FSocket, Trash, 512, MSG_NOSIGNAL );
            } while(Read==512);
         }
     }
@@ -225,10 +225,10 @@ int TMsgSocket::WaitingData()
     u_long x = 0;
 #ifdef OS_WINDOWS
     if (ioctlsocket(FSocket, FIONREAD, &x) == 0)
-        result = x;
+        result = (int)x;
 #else
     if (ioctl(FSocket, FIONREAD, &x) == 0)
-        result = x;
+        result = (int)x;
 #endif
     if (result>MaxPacketSize)
         result = MaxPacketSize;
@@ -559,7 +559,7 @@ int TMsgSocket::Receive(void *Data, int BufSize, int &SizeRecvd)
     LastTcpError=0;
     if (CanRead(RecvTimeout))
     {
-        SizeRecvd=recv(FSocket ,(char*)Data ,BufSize ,MSG_NOSIGNAL );
+        SizeRecvd=(int)recv(FSocket ,(char*)Data ,BufSize ,MSG_NOSIGNAL );
 
         if (SizeRecvd>0) // something read (default case)
            LastTcpError=0;
@@ -584,7 +584,7 @@ int TMsgSocket::RecvPacket(void *Data, int Size)
     WaitForData(Size, RecvTimeout);
     if (LastTcpError==0)
     {
-        BytesRead=recv(FSocket, (char*)Data, Size, MSG_NOSIGNAL);
+        BytesRead=(int)recv(FSocket, (char*)Data, Size, MSG_NOSIGNAL);
         if (BytesRead==0)
             LastTcpError = WSAECONNRESET;  // Connection reset by Peer
         else
@@ -607,7 +607,7 @@ int TMsgSocket::PeekPacket(void *Data, int Size)
     WaitForData(Size, RecvTimeout);
     if (LastTcpError==0)
     {
-        BytesRead=recv(FSocket, (char*)Data, Size, MSG_PEEK | MSG_NOSIGNAL );
+        BytesRead=(int)recv(FSocket, (char*)Data, Size, MSG_PEEK | MSG_NOSIGNAL );
         if (BytesRead==0)
             LastTcpError = WSAECONNRESET;  // Connection reset by Peer
         else

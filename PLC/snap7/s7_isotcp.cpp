@@ -444,7 +444,7 @@ int TIsoTcpSocket::isoRecvPDU(PIsoDataPDU Data)
 	pbyte pData;
 	int max;
 	int Offset;
-	int Received;
+	int Received = 0;
 	int NumParts;
 	bool Complete;
 

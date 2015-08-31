@@ -46,7 +46,7 @@ longword SysGetTick()
 #else
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
-    return (longword) (ts.tv_sec * 1000) + (ts.tv_nsec / 1000000);
+    return (longword) (ts.tv_sec * 1000) + (longword)(ts.tv_nsec / 1000000);
 #endif
 }
 //---------------------------------------------------------------------------

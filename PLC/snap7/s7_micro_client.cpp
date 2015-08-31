@@ -996,7 +996,7 @@ int TSnap7MicroClient::opUpload()
     int  IsoSize;
     byte Upload_ID = 0; // not strictly needed, only to avoid warning
 	byte BlockType;
-    int  BlockNum, BlockLength, Result;
+    int  BlockNum, BlockLength = 0, Result;
     bool Done, Full; // if full==true, the data will be compatible to full download function
     uintptr_t Offset;
     bool RoomError = false;
