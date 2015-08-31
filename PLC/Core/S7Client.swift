@@ -133,7 +133,7 @@ class S7Client {
     func read<T>(area: S7Area, number: Int32, offset: Int32, defaultValue: T, completion: ((T?, Int32) -> Void)?) {
         self.async {
             var buffer = defaultValue
-            var retn = Cli_ReadArea(self.object, area.rawValue, number, offset, Int32(sizeof(T)), S7WordLength.Byte.rawValue, &buffer)
+            let retn = Cli_ReadArea(self.object, area.rawValue, number, offset, Int32(sizeof(T)), S7WordLength.Byte.rawValue, &buffer)
             completion?(buffer, retn)
         }
     }
@@ -148,7 +148,7 @@ class S7Client {
     func numberOfBlocks(completion: ((S7BlockCount?, Int32) -> Void)?) {
         self.async {
             var list = S7BlockCount()
-            var retn = Cli_ListBlocks(self.object, &list)
+            let retn = Cli_ListBlocks(self.object, &list)
             completion?(list, retn)
         }
     }

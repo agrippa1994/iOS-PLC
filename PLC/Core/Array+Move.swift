@@ -10,7 +10,7 @@ import Foundation
 
 extension Array {
     mutating func move(fromIndex: Int, toIndex: Int) {
-        var obj = self.removeAtIndex(fromIndex)
+        let obj = self.removeAtIndex(fromIndex)
         self.insert(obj, atIndex: toIndex)
     }
 }

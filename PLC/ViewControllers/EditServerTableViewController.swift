@@ -53,7 +53,7 @@ class EditServerTableViewController: UITableViewController, UIPickerViewDataSour
         return pickerView == self.connectionTypePickerView ? 3 : 11
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == self.connectionTypePickerView {
             return S7ConnectionType(rawValue: word(row + 1))!.localizedString
         } else {
