@@ -157,8 +157,8 @@ public:
                 uint64_t nsecs = ((uint64_t) tv.tv_sec) * 1000000000 +
                         Timeout * 1000000 +
                         ((uint64_t) tv.tv_usec) * 1000;
-                ts.tv_sec = nsecs / 1000000000;
-                ts.tv_nsec = (nsecs - ((uint64_t) ts.tv_sec) * 1000000000);
+                ts.tv_sec = (__darwin_time_t)(nsecs / 1000000000);
+                ts.tv_nsec = (long)(nsecs - ((uint64_t) ts.tv_sec) * 1000000000);
                 do {
                     Result = pthread_cond_timedwait(&CVariable, &Mutex, &ts);
                     if (Result == ETIMEDOUT)
