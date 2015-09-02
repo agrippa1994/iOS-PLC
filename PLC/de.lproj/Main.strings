@@ -1,1 +1,84 @@
 
+/* Class = "UILabel"; text = "Detail"; ObjectID = "47T-Bi-Ynt"; */
+"47T-Bi-Ynt.text" = "Detail";
+
+/* Class = "UITextField"; placeholder = "Server's name"; ObjectID = "5TH-RN-hwb"; */
+"5TH-RN-hwb.placeholder" = "Name des Servers";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "9PJ-FM-HVq"; */
+"9PJ-FM-HVq.text" = "Title";
+
+/* Class = "UITableViewSection"; headerTitle = "Connection Type"; ObjectID = "Guh-WM-hUc"; */
+"Guh-WM-hUc.headerTitle" = "Verbindungstyp";
+
+/* Class = "UIBarButtonItem"; title = "Connection"; ObjectID = "HoM-nN-gsZ"; */
+"HoM-nN-gsZ.title" = "Verbindungen";
+
+/* Class = "UITableViewSection"; headerTitle = "Name"; ObjectID = "KMb-Jo-XLG"; */
+"KMb-Jo-XLG.headerTitle" = "Name";
+
+/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[0] = "PE"; ObjectID = "LIA-Bz-sA8"; */
+"LIA-Bz-sA8.segmentTitles[0]" = "PE";
+
+/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[1] = "PA"; ObjectID = "LIA-Bz-sA8"; */
+"LIA-Bz-sA8.segmentTitles[1]" = "PA";
+
+/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[2] = "MK"; ObjectID = "LIA-Bz-sA8"; */
+"LIA-Bz-sA8.segmentTitles[2]" = "MK";
+
+/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[3] = "DB"; ObjectID = "LIA-Bz-sA8"; */
+"LIA-Bz-sA8.segmentTitles[3]" = "DB";
+
+/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[4] = "CT"; ObjectID = "LIA-Bz-sA8"; */
+"LIA-Bz-sA8.segmentTitles[4]" = "CT";
+
+/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[5] = "TM"; ObjectID = "LIA-Bz-sA8"; */
+"LIA-Bz-sA8.segmentTitles[5]" = "TM";
+
+/* Class = "UINavigationItem"; title = "Edit Server"; ObjectID = "Lyw-i4-vgi"; */
+"Lyw-i4-vgi.title" = "Bearbeite Server";
+
+/* Class = "UITableViewSection"; headerTitle = "Slot and Rack"; ObjectID = "NeV-ez-HBf"; */
+"NeV-ez-HBf.headerTitle" = "Slot und Rack";
+
+/* Class = "UILabel"; text = "Rack"; ObjectID = "Oyx-yT-szP"; */
+"Oyx-yT-szP.text" = "Rack";
+
+/* Class = "UITabBarItem"; title = "PE"; ObjectID = "cJw-zj-S0A"; */
+"cJw-zj-S0A.title" = "PE";
+
+/* Class = "UILabel"; text = "Slot"; ObjectID = "jXS-Gd-sAZ"; */
+"jXS-Gd-sAZ.text" = "Slot";
+
+/* Class = "UINavigationItem"; prompt = "S7 Client"; ObjectID = "ohG-QA-0S8"; */
+"ohG-QA-0S8.prompt" = "S7 Client";
+
+/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[0] = "PE"; ObjectID = "uQs-hJ-cgf"; */
+"uQs-hJ-cgf.segmentTitles[0]" = "PE";
+
+/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[1] = "PA"; ObjectID = "uQs-hJ-cgf"; */
+"uQs-hJ-cgf.segmentTitles[1]" = "PA";
+
+/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[2] = "MK"; ObjectID = "uQs-hJ-cgf"; */
+"uQs-hJ-cgf.segmentTitles[2]" = "MK";
+
+/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[3] = "DB"; ObjectID = "uQs-hJ-cgf"; */
+"uQs-hJ-cgf.segmentTitles[3]" = "DB";
+
+/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[4] = "CT"; ObjectID = "uQs-hJ-cgf"; */
+"uQs-hJ-cgf.segmentTitles[4]" = "CT";
+
+/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[5] = "TM"; ObjectID = "uQs-hJ-cgf"; */
+"uQs-hJ-cgf.segmentTitles[5]" = "TM";
+
+/* Class = "UITableViewSection"; headerTitle = "Host"; ObjectID = "w5p-04-1rY"; */
+"w5p-04-1rY.headerTitle" = "Host";
+
+/* Class = "UINavigationItem"; title = "Server List"; ObjectID = "xVh-YT-8aJ"; */
+"xVh-YT-8aJ.title" = "Server-Liste";
+
+/* Class = "UIBarButtonItem"; title = "Connect"; ObjectID = "y84-4H-q0Q"; */
+"y84-4H-q0Q.title" = "Verbinden";
+
+/* Class = "UITextField"; placeholder = "Server's host"; ObjectID = "zKS-Hr-YjT"; */
+"zKS-Hr-YjT.placeholder" = "Host des Servers";

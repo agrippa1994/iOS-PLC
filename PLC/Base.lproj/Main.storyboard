@@ -50,7 +50,11 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem systemItem="cancel" id="Uae-kw-zWP"/>
+                        <barButtonItem systemItem="cancel" id="Uae-kw-zWP">
+                            <connections>
+                                <action selector="onCancel:" destination="yB1-hC-nE3" id="7Uh-lb-7Jy"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Server List" id="xVh-YT-8aJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="CFX-tG-VXT">
@@ -149,27 +153,24 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Slot and Rack" id="NeV-ez-HBf">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="211" id="Bxn-Dl-NTf">
-                                        <rect key="frame" x="0.0" y="471" width="600" height="211"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="Bxn-Dl-NTf">
+                                        <rect key="frame" x="0.0" y="471" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bxn-Dl-NTf" id="goc-DR-S8h">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-zo-Zwt">
-                                                    <rect key="frame" x="8" y="8" width="584" height="194"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="183"/>
                                                 </pickerView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyx-yT-szP">
-                                                    <rect key="frame" x="296" y="93" width="42" height="23"/>
+                                                    <rect key="frame" x="296" y="88" width="42" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXS-Gd-sAZ">
-                                                    <rect key="frame" x="4" y="94" width="34" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="GZ5-sA-B8x"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="4" y="88" width="34" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -196,7 +197,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Server" id="Lyw-i4-vgi">
-                        <barButtonItem key="rightBarButtonItem" title="Connect" id="y84-4H-q0Q"/>
+                        <barButtonItem key="rightBarButtonItem" title="Connect" id="y84-4H-q0Q">
+                            <connections>
+                                <action selector="onConnect:" destination="fOg-QH-nbs" id="smP-4f-pR8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -226,41 +231,77 @@
             </objects>
             <point key="canvasLocation" x="951" y="363"/>
         </scene>
-        <!--Main Table View Controller-->
-        <scene sceneID="Wp6-R8-xuV">
+        <!--Main Collection View Controller-->
+        <scene sceneID="aGh-J8-oLL">
             <objects>
-                <tableViewController id="oss-1Q-Szl" customClass="MainTableViewController" customModule="PLC" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="i8I-NZ-82k">
+                <collectionViewController id="7jI-OY-VHz" customClass="MainCollectionViewController" customModule="PLC" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" id="JVV-Zj-gLq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="U2y-co-F4z">
-                                <rect key="frame" x="0.0" y="144" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U2y-co-F4z" id="Lm2-YF-DHg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Erm-aB-aUr">
+                            <size key="itemSize" width="168" height="95"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Qab-a0-WGz">
+                                <rect key="frame" x="0.0" y="114" width="168" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="168" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLQ-X9-g2X">
+                                            <rect key="frame" x="8" y="8" width="152" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsg-dN-qVK">
+                                            <rect key="frame" x="60" y="32" width="51" height="31"/>
+                                        </switch>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="Wkj-YG-bA8">
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW9-CS-APq">
+                                    <rect key="frame" x="8" y="14" width="584" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="leadingMargin" secondItem="yW9-CS-APq" secondAttribute="leading" id="0Gv-CA-7es"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="yW9-CS-APq" secondAttribute="bottom" constant="7" id="jzZ-hF-E6Y"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="yW9-CS-APq" secondAttribute="trailing" id="lKn-a9-3WA"/>
+                                <constraint firstItem="yW9-CS-APq" firstAttribute="top" secondItem="Wkj-YG-bA8" secondAttribute="topMargin" constant="6" id="ppJ-jF-twK"/>
+                            </constraints>
+                        </collectionReusableView>
                         <connections>
-                            <outlet property="dataSource" destination="oss-1Q-Szl" id="QpA-sT-7pm"/>
-                            <outlet property="delegate" destination="oss-1Q-Szl" id="27N-mT-wLO"/>
+                            <outlet property="dataSource" destination="7jI-OY-VHz" id="MeU-IX-CMm"/>
+                            <outlet property="delegate" destination="7jI-OY-VHz" id="vfu-x0-blj"/>
                         </connections>
-                    </tableView>
+                    </collectionView>
                     <toolbarItems>
                         <barButtonItem title="Connection" id="HoM-nN-gsZ">
                             <connections>
-                                <segue destination="n68-nv-GTP" kind="presentation" id="IrH-Ka-abv"/>
+                                <segue destination="n68-nv-GTP" kind="presentation" identifier="ServerListNavigation" id="IrH-Ka-abv"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" prompt="S7 Client" id="ohG-QA-0S8">
+                    <navigationItem key="navigationItem" id="qxe-kY-rP0">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" id="uQs-hJ-cgf">
-                            <rect key="frame" x="120" y="37" width="360" height="30"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="hm4-hq-LWl"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="uQs-hJ-cgf">
+                            <rect key="frame" x="196" y="7" width="209" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <edgeInsets key="layoutMargins" top="25" left="16" bottom="8" right="8"/>
                             <segments>
@@ -273,22 +314,8 @@
                             </segments>
                         </segmentedControl>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yMB-xU-uJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" momentary="YES" id="LIA-Bz-sA8">
-                    <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <edgeInsets key="layoutMargins" top="25" left="16" bottom="8" right="8"/>
-                    <segments>
-                        <segment title="PE"/>
-                        <segment title="PA"/>
-                        <segment title="MK"/>
-                        <segment title="DB"/>
-                        <segment title="CT"/>
-                        <segment title="TM"/>
-                    </segments>
-                </segmentedControl>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLo-A0-JCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951" y="-401"/>
         </scene>
@@ -308,7 +335,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="oss-1Q-Szl" kind="relationship" relationship="rootViewController" id="g52-hN-D3l"/>
+                        <segue destination="7jI-OY-VHz" kind="relationship" relationship="rootViewController" id="hwf-2K-Gwm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4b-Qs-n0t" userLabel="First Responder" sceneMemberID="firstResponder"/>

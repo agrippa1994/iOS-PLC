@@ -8,13 +8,23 @@
 
 import UIKit
 
+@objc protocol EditServerTableViewControllerDelegate {
+    func editServerTableViewServerChosen(server: Server)
+}
+
 class EditServerTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+    weak var delegate: EditServerTableViewControllerDelegate?
     var server: Server!
  
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var hostTextField: UITextField!
     @IBOutlet weak var connectionTypePickerView: UIPickerView!
     @IBOutlet weak var slotRackPickerView: UIPickerView!
+    
+    @IBAction func onConnect(sender: AnyObject) {
+        self.loadDataFromUI()
+        self.delegate?.editServerTableViewServerChosen(self.server)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,21 +38,12 @@ class EditServerTableViewController: UITableViewController, UIPickerViewDataSour
         self.slotRackPickerView.dataSource = self
         self.slotRackPickerView.delegate = self
         
-        self.nameTextField.text = self.server.name
-        self.hostTextField.text = self.server.host
-        self.connectionTypePickerView.selectRow(self.server.connectionType.integerValue - 1, inComponent: 0, animated: false)
-        self.slotRackPickerView.selectRow(self.server.slot.integerValue, inComponent: 0, animated: false)
-        self.slotRackPickerView.selectRow(self.server.rack.integerValue, inComponent: 1, animated: false)
+        self.loadDataToUI()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        self.server.name = self.nameTextField.text
-        self.server.host = self.hostTextField.text
-        self.server.connectionType = NSNumber(integer: self.connectionTypePickerView.selectedRowInComponent(0) + 1)
-        self.server.slot = NSNumber(integer: self.slotRackPickerView.selectedRowInComponent(0))
-        self.server.rack = NSNumber(integer: self.slotRackPickerView.selectedRowInComponent(1))
+        self.loadDataFromUI()
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -65,5 +66,20 @@ class EditServerTableViewController: UITableViewController, UIPickerViewDataSour
         textField.resignFirstResponder()
         return true
     }
-
+    
+    func loadDataFromUI() {
+        self.server.name = self.nameTextField.text
+        self.server.host = self.hostTextField.text
+        self.server.connectionType = NSNumber(integer: self.connectionTypePickerView.selectedRowInComponent(0) + 1)
+        self.server.slot = NSNumber(integer: self.slotRackPickerView.selectedRowInComponent(0))
+        self.server.rack = NSNumber(integer: self.slotRackPickerView.selectedRowInComponent(1))
+    }
+    
+    func loadDataToUI() {
+        self.nameTextField.text = self.server.name
+        self.hostTextField.text = self.server.host
+        self.connectionTypePickerView.selectRow(self.server.connectionType.integerValue - 1, inComponent: 0, animated: false)
+        self.slotRackPickerView.selectRow(self.server.slot.integerValue, inComponent: 0, animated: false)
+        self.slotRackPickerView.selectRow(self.server.rack.integerValue, inComponent: 1, animated: false)
+    }
 }

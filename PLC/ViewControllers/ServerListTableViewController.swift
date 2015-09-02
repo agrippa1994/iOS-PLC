@@ -8,8 +8,18 @@
 
 import UIKit
 
-class ServerListTableViewController: UITableViewController {
+@objc protocol ServerListTableViewControllerDelegate {
+    func serverListTableViewControllerServerChosen(controller: ServerListTableViewController, server: Server)
+    func serverListTableViewControllerCancelled(controller: ServerListTableViewController)
+}
+
+class ServerListTableViewController: UITableViewController, EditServerTableViewControllerDelegate {
     var servers: [Server] = []
+    weak var delegate: ServerListTableViewControllerDelegate?
+    
+    @IBAction func onCancel(sender: AnyObject) {
+        self.delegate?.serverListTableViewControllerCancelled(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,8 +82,15 @@ class ServerListTableViewController: UITableViewController {
                 server = CoreData.coreData.servers.create(true)!
             }
             
-            (segue.destinationViewController as! EditServerTableViewController).server = server
+            if let ctrl = segue.destinationViewController as? EditServerTableViewController {
+                ctrl.server = server
+                ctrl.delegate = self
+            }
         }
+    }
+    
+    func editServerTableViewServerChosen(server: Server) {
+        self.delegate?.serverListTableViewControllerServerChosen(self, server: server)
     }
     
     func reload() {

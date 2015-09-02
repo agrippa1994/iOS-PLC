@@ -11,3 +11,15 @@
 "S7CONNECTIONTYPE_OP" = "OP";
 
 "S7CONNECTIONTYPE_BASIC" = "Basic";
+
+"ALERT_INFO_TITLE" = "Information";
+
+"ALERT_ERROR_TITLE" = "Fehler";
+
+"ALERT_INFO_CONNECTED_MESSAGE" = "Verbindung zum Server erfolgreich aufgebaut!";
+
+"ALERT_ERROR_CONNECT_MESSAGE"= "Verbindung zum Server kann nicht aufgebaut werden!";
+
+"MAINCOLLECTIONVIEWCONTROLLER_STATIC_HEADER_TITLE" = "Statische Einträge";
+
+"MAINCOLLECTIONVIEWCONTROLLER_DYNAMIC_HEADER_TITLE" = "Dynamische Einträge";
