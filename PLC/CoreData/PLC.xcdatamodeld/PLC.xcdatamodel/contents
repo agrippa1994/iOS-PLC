@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Data" representedClassName=".Data" syncable="YES">
+        <attribute name="area" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="bitLength" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="index" attributeType="Integer 64" defaultValueString="-1" indexed="YES" syncable="YES"/>
+        <attribute name="number" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="offset" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="server" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Server" inverseName="data" inverseEntity="Server" syncable="YES"/>
+    </entity>
     <entity name="Server" representedClassName="Server" syncable="YES">
-        <attribute name="connectionType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="connectionType" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="host" attributeType="String" syncable="YES"/>
-        <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="-1" indexed="YES" syncable="YES"/>
+        <attribute name="index" attributeType="Integer 64" defaultValueString="-1" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="rack" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="slot" optional="YES" attributeType="Integer 32" defaultValueString="2" syncable="YES"/>
+        <attribute name="rack" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="slot" attributeType="Integer 32" defaultValueString="2" syncable="YES"/>
+        <relationship name="data" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Data" inverseName="server" inverseEntity="Data" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Server" positionX="-10386" positionY="-3969" width="128" height="135"/>
+        <element name="Data" positionX="-54" positionY="-18" width="128" height="133"/>
+        <element name="Server" positionX="-380" positionY="-135" width="128" height="148"/>
     </elements>
 </model>

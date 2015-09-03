@@ -21,6 +21,7 @@ class CoreData {
     }
     
     let servers = IndexableEntityHelper<Server>(name: "Server")
+    let data = IndexableEntityHelper<Data>(name: "Data")
     
     private init() {
         

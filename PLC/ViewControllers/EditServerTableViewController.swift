@@ -70,16 +70,16 @@ class EditServerTableViewController: UITableViewController, UIPickerViewDataSour
     func loadDataFromUI() {
         self.server.name = self.nameTextField.text
         self.server.host = self.hostTextField.text
-        self.server.connectionType = NSNumber(integer: self.connectionTypePickerView.selectedRowInComponent(0) + 1)
-        self.server.slot = NSNumber(integer: self.slotRackPickerView.selectedRowInComponent(0))
-        self.server.rack = NSNumber(integer: self.slotRackPickerView.selectedRowInComponent(1))
+        self.server.connectionType = self.connectionTypePickerView.selectedRowInComponent(0) + 1
+        self.server.slot = Int32(self.slotRackPickerView.selectedRowInComponent(0))
+        self.server.rack = Int32(self.slotRackPickerView.selectedRowInComponent(1))
     }
     
     func loadDataToUI() {
         self.nameTextField.text = self.server.name
         self.hostTextField.text = self.server.host
-        self.connectionTypePickerView.selectRow(self.server.connectionType.integerValue - 1, inComponent: 0, animated: false)
-        self.slotRackPickerView.selectRow(self.server.slot.integerValue, inComponent: 0, animated: false)
-        self.slotRackPickerView.selectRow(self.server.rack.integerValue, inComponent: 1, animated: false)
+        self.connectionTypePickerView.selectRow(self.server.connectionType - 1, inComponent: 0, animated: false)
+        self.slotRackPickerView.selectRow(Int(self.server.slot), inComponent: 0, animated: false)
+        self.slotRackPickerView.selectRow(Int(self.server.rack), inComponent: 1, animated: false)
     }
 }

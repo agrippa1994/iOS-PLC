@@ -96,11 +96,11 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         self.currentAlertController = UIAlertController(title: "Info", message: "Baue Verbindung auf", preferredStyle: .Alert)
         
         self.presentViewController(self.currentAlertController!, animated: true) {
-            self.client.connect(server.host, rack: server.rack.integerValue, slot: server.slot.integerValue) { state in
+            self.client.connect(server.host!, rack: Int(server.rack), slot: Int(server.slot)) { state in
                 dispatch_async(dispatch_get_main_queue()) {
                     self.currentAlertController?.dismissViewControllerAnimated(true) {
                         let texts = state == 0 ? ("ALERT_INFO_TITLE", "ALERT_INFO_CONNECTED_MESSAGE") : ("ALERT_ERROR_TITLE", "ALERT_ERROR_CONNECT_MESSAGE")
-                        
+            
                         self.currentAlertController = UIAlertController(title: texts.0.localized, message: texts.1.localized, preferredStyle: .Alert)
                         
                         self.currentAlertController!.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { action in

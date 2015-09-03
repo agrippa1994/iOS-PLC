@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		3C22D9871B6FFC4C0054DCE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C22D9891B6FFC4C0054DCE1 /* Localizable.strings */; };
 		3CAD8FA51B9864DC0018693F /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD8FA41B9864DC0018693F /* MainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3CAD8FAA1B987A600018693F /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD8FA61B987A600018693F /* Server+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		3CAD8FAB1B987A600018693F /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD8FA71B987A600018693F /* Server.swift */; settings = {ASSET_TAGS = (); }; };
+		3CAD8FAC1B987A600018693F /* Data+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD8FA81B987A600018693F /* Data+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		3CAD8FAD1B987A600018693F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD8FA91B987A600018693F /* Data.swift */; settings = {ASSET_TAGS = (); }; };
 		3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */; };
 		3CB4CF481B6FF89D00EBEFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF461B6FF89D00EBEFEB /* Main.storyboard */; };
 		3CB4CF4A1B6FF89D00EBEFEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */; };
 		3CB4CF4D1B6FF89D00EBEFEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4CF4B1B6FF89D00EBEFEB /* LaunchScreen.xib */; };
 		3CD152E81B7CFD2E004E9621 /* PLC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CD152E61B7CFD2E004E9621 /* PLC.xcdatamodeld */; };
-		3CD152EA1B7CFF74004E9621 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD152E91B7CFF74004E9621 /* Server.swift */; };
 		3CD152EC1B7D03E4004E9621 /* Array+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD152EB1B7D03E4004E9621 /* Array+Move.swift */; };
 		3CD152EE1B7D0EE5004E9621 /* EditServerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD152ED1B7D0EE5004E9621 /* EditServerTableViewController.swift */; };
 		3CD7AF2E1B7BDBC10023369B /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD7AF2A1B7BDBC10023369B /* CoreData.swift */; };
@@ -43,6 +46,10 @@
 		3C22D98A1B6FFC4E0054DCE1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3C4E95A31B96159B006966BE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		3CAD8FA41B9864DC0018693F /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		3CAD8FA61B987A600018693F /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3CAD8FA71B987A600018693F /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		3CAD8FA81B987A600018693F /* Data+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3CAD8FA91B987A600018693F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3CB4CF3A1B6FF89D00EBEFEB /* PLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB4CF3E1B6FF89D00EBEFEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB4CF3F1B6FF89D00EBEFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +57,6 @@
 		3CB4CF491B6FF89D00EBEFEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3CB4CF4C1B6FF89D00EBEFEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3CD152E71B7CFD2E004E9621 /* PLC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLC.xcdatamodel; sourceTree = "<group>"; };
-		3CD152E91B7CFF74004E9621 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		3CD152EB1B7D03E4004E9621 /* Array+Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Move.swift"; sourceTree = "<group>"; };
 		3CD152ED1B7D0EE5004E9621 /* EditServerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditServerTableViewController.swift; sourceTree = "<group>"; };
 		3CD7AF2A1B7BDBC10023369B /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -157,7 +163,10 @@
 		3CD7AF2C1B7BDBC10023369B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3CD152E91B7CFF74004E9621 /* Server.swift */,
+				3CAD8FA61B987A600018693F /* Server+CoreDataProperties.swift */,
+				3CAD8FA71B987A600018693F /* Server.swift */,
+				3CAD8FA81B987A600018693F /* Data+CoreDataProperties.swift */,
+				3CAD8FA91B987A600018693F /* Data.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -295,19 +304,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAD8FAB1B987A600018693F /* Server.swift in Sources */,
 				3CD7AF2E1B7BDBC10023369B /* CoreData.swift in Sources */,
 				3CD7AF681B7BDDBA0023369B /* snap_threads.cpp in Sources */,
 				3CAD8FA51B9864DC0018693F /* MainTableViewController.swift in Sources */,
 				3CD152EE1B7D0EE5004E9621 /* EditServerTableViewController.swift in Sources */,
 				3CD7AF351B7BDD2B0023369B /* ServerListTableViewController.swift in Sources */,
 				3CD152EC1B7D03E4004E9621 /* Array+Move.swift in Sources */,
+				3CAD8FAC1B987A600018693F /* Data+CoreDataProperties.swift in Sources */,
 				3CB4CF401B6FF89D00EBEFEB /* AppDelegate.swift in Sources */,
 				3CD7AF391B7BDD570023369B /* S7Client.swift in Sources */,
 				3CD7AF631B7BDDBA0023369B /* snap7.cpp in Sources */,
-				3CD152EA1B7CFF74004E9621 /* Server.swift in Sources */,
 				3CD7AF601B7BDDBA0023369B /* s7_peer.cpp in Sources */,
 				3CD7AF611B7BDDBA0023369B /* s7_server.cpp in Sources */,
 				3CD7AF5D1B7BDDBA0023369B /* s7_isotcp.cpp in Sources */,
+				3CAD8FAA1B987A600018693F /* Server+CoreDataProperties.swift in Sources */,
 				3CD7AF671B7BDDBA0023369B /* snap_tcpsrvr.cpp in Sources */,
 				3CD7AF651B7BDDBA0023369B /* snap_msgsock.cpp in Sources */,
 				3CD7AF661B7BDDBA0023369B /* snap_sysutils.cpp in Sources */,
@@ -318,6 +329,7 @@
 				3CD7AF2F1B7BDBC10023369B /* CoreDataHelpers.swift in Sources */,
 				3CD7AF641B7BDDBA0023369B /* snap7_libmain.cpp in Sources */,
 				3CD7AF5F1B7BDDBA0023369B /* s7_partner.cpp in Sources */,
+				3CAD8FAD1B987A600018693F /* Data.swift in Sources */,
 				3CD152E81B7CFD2E004E9621 /* PLC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
