@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZT9-QT-nJo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JaP-sp-2Kb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
@@ -7,6 +7,18 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="ik1-JG-UaO">
+            <objects>
+                <splitViewController id="JaP-sp-2Kb" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="ZT9-QT-nJo" kind="relationship" relationship="masterViewController" id="9kt-7B-moF"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ra2-A2-RVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="-283"/>
+        </scene>
         <!--Server List-->
         <scene sceneID="9dg-uL-ibJ">
             <objects>
@@ -67,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qou-ih-7bG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1771" y="363"/>
+            <point key="canvasLocation" x="2487" y="-1545"/>
         </scene>
         <!--Edit Server-->
         <scene sceneID="zy4-jU-dcZ">
@@ -213,7 +225,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nke-vE-Z1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2490" y="363"/>
+            <point key="canvasLocation" x="3206" y="-1545"/>
         </scene>
         <!--Server List Navigation-->
         <scene sceneID="hdf-nH-k7D">
@@ -229,7 +241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SF1-tC-lfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="363"/>
+            <point key="canvasLocation" x="1667" y="-1545"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="wn9-bm-pFY">
@@ -254,24 +266,11 @@
                     <navigationItem key="navigationItem" id="6gt-OQ-qeO">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="hm4-hq-LWl"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="uQs-hJ-cgf">
-                            <rect key="frame" x="196" y="7" width="209" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <edgeInsets key="layoutMargins" top="25" left="16" bottom="8" right="8"/>
-                            <segments>
-                                <segment title="PE"/>
-                                <segment title="PA"/>
-                                <segment title="MK"/>
-                                <segment title="DB"/>
-                                <segment title="CT"/>
-                                <segment title="TM"/>
-                            </segments>
-                        </segmentedControl>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUN-Cs-whZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="-401"/>
+            <point key="canvasLocation" x="951" y="-839"/>
         </scene>
         <!--PE Navigation-->
         <scene sceneID="mar-ii-1Dg">
@@ -294,7 +293,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4b-Qs-n0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-401"/>
+            <point key="canvasLocation" x="139" y="-839"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
