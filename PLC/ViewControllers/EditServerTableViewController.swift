@@ -23,6 +23,8 @@ class EditServerTableViewController: UITableViewController, UIPickerViewDataSour
     
     @IBAction func onConnect(sender: AnyObject) {
         self.loadDataFromUI()
+        CoreData.coreData.save()
+        
         self.delegate?.editServerTableViewServerChosen(self.server)
     }
     
@@ -44,6 +46,7 @@ class EditServerTableViewController: UITableViewController, UIPickerViewDataSour
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.loadDataFromUI()
+        CoreData.coreData.save()
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
