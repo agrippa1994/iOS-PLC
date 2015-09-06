@@ -1,15 +1,33 @@
 
+/* Class = "UILabel"; text = "Label"; ObjectID = "1jr-dP-qfb"; */
+"1jr-dP-qfb.text" = "Label";
+
 /* Class = "UILabel"; text = "Detail"; ObjectID = "47T-Bi-Ynt"; */
 "47T-Bi-Ynt.text" = "Detail";
 
 /* Class = "UITextField"; placeholder = "Server's name"; ObjectID = "5TH-RN-hwb"; */
 "5TH-RN-hwb.placeholder" = "Name des Servers";
 
+/* Class = "UINavigationItem"; title = "Edit Data"; ObjectID = "5ig-1i-njR"; */
+"5ig-1i-njR.title" = "Bearbeite Eintrag";
+
+/* Class = "UITableViewSection"; headerTitle = "Display Type"; ObjectID = "6ee-TI-6l9"; */
+"6ee-TI-6l9.headerTitle" = "Darstellungstyp";
+
+/* Class = "UITextField"; placeholder = "Address (e.g.: DB10.DBX1.0, EB5)"; ObjectID = "6xD-Yt-yC6"; */
+"6xD-Yt-yC6.placeholder" = "Adresse (z.B.: DB10.DBX1.0, EB5)";
+
 /* Class = "UILabel"; text = "Title"; ObjectID = "9PJ-FM-HVq"; */
 "9PJ-FM-HVq.text" = "Title";
 
+/* Class = "UITableViewSection"; headerTitle = "Name"; ObjectID = "D6R-LF-QIp"; */
+"D6R-LF-QIp.headerTitle" = "Name";
+
+/* Class = "UITableViewSection"; headerTitle = "S7 Address"; ObjectID = "DcD-kQ-7iK"; */
+"DcD-kQ-7iK.headerTitle" = "S7-Adresse";
+
 /* Class = "UITableViewSection"; headerTitle = "Connection Type"; ObjectID = "Guh-WM-hUc"; */
-"Guh-WM-hUc.headerTitle" = "Verbindungstyp";
+"Guh-WM-hUc.headerTitle" = "Verbindungs-Typ";
 
 /* Class = "UIBarButtonItem"; title = "Connection"; ObjectID = "HoM-nN-gsZ"; */
 "HoM-nN-gsZ.title" = "Verbindungen";
@@ -17,32 +35,23 @@
 /* Class = "UITableViewSection"; headerTitle = "Name"; ObjectID = "KMb-Jo-XLG"; */
 "KMb-Jo-XLG.headerTitle" = "Name";
 
-/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[0] = "PE"; ObjectID = "LIA-Bz-sA8"; */
-"LIA-Bz-sA8.segmentTitles[0]" = "PE";
-
-/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[1] = "PA"; ObjectID = "LIA-Bz-sA8"; */
-"LIA-Bz-sA8.segmentTitles[1]" = "PA";
-
-/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[2] = "MK"; ObjectID = "LIA-Bz-sA8"; */
-"LIA-Bz-sA8.segmentTitles[2]" = "MK";
-
-/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[3] = "DB"; ObjectID = "LIA-Bz-sA8"; */
-"LIA-Bz-sA8.segmentTitles[3]" = "DB";
-
-/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[4] = "CT"; ObjectID = "LIA-Bz-sA8"; */
-"LIA-Bz-sA8.segmentTitles[4]" = "CT";
-
-/* Class = "UISegmentedControl"; LIA-Bz-sA8.segmentTitles[5] = "TM"; ObjectID = "LIA-Bz-sA8"; */
-"LIA-Bz-sA8.segmentTitles[5]" = "TM";
-
 /* Class = "UINavigationItem"; title = "Edit Server"; ObjectID = "Lyw-i4-vgi"; */
 "Lyw-i4-vgi.title" = "Bearbeite Server";
 
 /* Class = "UITableViewSection"; headerTitle = "Slot and Rack"; ObjectID = "NeV-ez-HBf"; */
 "NeV-ez-HBf.headerTitle" = "Slot und Rack";
 
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "O7a-Jj-yuH"; */
+"O7a-Jj-yuH.placeholder" = "Name";
+
 /* Class = "UILabel"; text = "Rack"; ObjectID = "Oyx-yT-szP"; */
 "Oyx-yT-szP.text" = "Rack";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QXC-0B-fHk"; */
+"QXC-0B-fHk.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RwN-gr-yf5"; */
+"RwN-gr-yf5.text" = "Label";
 
 /* Class = "UITabBarItem"; title = "PE"; ObjectID = "cJw-zj-S0A"; */
 "cJw-zj-S0A.title" = "PE";
@@ -50,29 +59,14 @@
 /* Class = "UILabel"; text = "Slot"; ObjectID = "jXS-Gd-sAZ"; */
 "jXS-Gd-sAZ.text" = "Slot";
 
-/* Class = "UINavigationItem"; prompt = "S7 Client"; ObjectID = "ohG-QA-0S8"; */
-"ohG-QA-0S8.prompt" = "S7 Client";
-
-/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[0] = "PE"; ObjectID = "uQs-hJ-cgf"; */
-"uQs-hJ-cgf.segmentTitles[0]" = "PE";
-
-/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[1] = "PA"; ObjectID = "uQs-hJ-cgf"; */
-"uQs-hJ-cgf.segmentTitles[1]" = "PA";
-
-/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[2] = "MK"; ObjectID = "uQs-hJ-cgf"; */
-"uQs-hJ-cgf.segmentTitles[2]" = "MK";
-
-/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[3] = "DB"; ObjectID = "uQs-hJ-cgf"; */
-"uQs-hJ-cgf.segmentTitles[3]" = "DB";
-
-/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[4] = "CT"; ObjectID = "uQs-hJ-cgf"; */
-"uQs-hJ-cgf.segmentTitles[4]" = "CT";
-
-/* Class = "UISegmentedControl"; uQs-hJ-cgf.segmentTitles[5] = "TM"; ObjectID = "uQs-hJ-cgf"; */
-"uQs-hJ-cgf.segmentTitles[5]" = "TM";
+/* Class = "UILabel"; text = "Label"; ObjectID = "krB-19-tGG"; */
+"krB-19-tGG.text" = "Label";
 
 /* Class = "UITableViewSection"; headerTitle = "Host"; ObjectID = "w5p-04-1rY"; */
 "w5p-04-1rY.headerTitle" = "Host";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wVe-ZM-F7m"; */
+"wVe-ZM-F7m.text" = "Label";
 
 /* Class = "UINavigationItem"; title = "Server List"; ObjectID = "xVh-YT-8aJ"; */
 "xVh-YT-8aJ.title" = "Server-Liste";

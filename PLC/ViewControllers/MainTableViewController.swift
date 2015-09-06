@@ -8,9 +8,23 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController, ServerListTableViewControllerDelegate {
+class MainTableViewController: UITableViewController, ServerListTableViewControllerDelegate, EditDataTableViewControllerDelegate {
     var currentAlertController: UIAlertController?
     var client = S7Client()
+    
+    @IBAction func onAdd(sender: AnyObject) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_STATIC".localized, style: .Default) { _ in
+            self.addDataEntry(isStatic: true)
+        })
+        
+        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_DYNAMIC".localized, style: .Default) { _ in
+            self.addDataEntry(isStatic: false)
+        })
+        
+        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel) { _ in })
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +90,7 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     */
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return (section == 0 ? "MAINCOLLECTIONVIEWCONTROLLER_STATIC_HEADER_TITLE" : "MAINCOLLECTIONVIEWCONTROLLER_DYNAMIC_HEADER_TITLE").localized
+        return (section == 0 ? "MAINTABLEVIEWCONTROLLER_STATIC_HEADER_TITLE" : "MAINTABLEVIEWCONTROLLER_DYNAMIC_HEADER_TITLE").localized
     }
     
     
@@ -84,6 +98,12 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ServerListNavigation" {
             if let ctrl = (segue.destinationViewController as? UINavigationController)?.topViewController as? ServerListTableViewController {
+                ctrl.delegate = self
+            }
+        }
+        
+        if segue.identifier == "EditData" {
+            if let ctrl = (segue.destinationViewController as? UINavigationController)?.topViewController as? EditDataTableViewController {
                 ctrl.delegate = self
             }
         }
@@ -116,5 +136,17 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     
     func serverListTableViewControllerCancelled(controller: ServerListTableViewController) {
         controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func editDataTableViewControllerDidCancel(controller: EditDataTableViewController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func editDataTableViewControllerDidSave(controller: EditDataTableViewController) {
+        
+    }
+    
+    func addDataEntry(isStatic isStatic: Bool) {
+        self.performSegueWithIdentifier("EditData", sender: self)
     }
 }

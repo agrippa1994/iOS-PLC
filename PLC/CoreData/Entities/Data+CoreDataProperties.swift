@@ -2,7 +2,7 @@
 //  Data+CoreDataProperties.swift
 //  PLC
 //
-//  Created by Manuel Stampfl on 03.09.15.
+//  Created by Manuel Stampfl on 06.09.15.
 //  Copyright © 2015 mani1337. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,10 +15,9 @@ import CoreData
 extension Data: Indexable {
 
     @NSManaged var index: Int64
-    @NSManaged var area: Int32
-    @NSManaged var number: Int32
-    @NSManaged var offset: Int32
-    @NSManaged var bitLength: Int32
+    @NSManaged var address: String?
+    @NSManaged var displayType: Int32
+    @NSManaged var name: String?
     @NSManaged var server: Server?
 
 }
