@@ -19,11 +19,11 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate, U
     @IBOutlet weak var displayTypePickerView: UIPickerView!
     
     weak var delegate: EditDataTableViewControllerDelegate?
-    var address: S7Entry?
+    var address: S7Address?
     
     @IBAction func textFieldValueChanged(sender: UITextField) {
         // Parse the input to an entry for S7
-        if let addr = try? sender.text?.toS7Entry() {
+        if let addr = try? sender.text?.toS7Address() {
             self.address = addr
         } else {
             self.address = nil
@@ -33,7 +33,7 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate, U
         sender.textColor =  self.address == nil ? UIColor.redColor() : UIColor.greenColor()
         
         // Update the details
-        (self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1)) as! AddressDetailsTableViewCell).entry = self.address
+        (self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1)) as! AddressDetailsTableViewCell).address = self.address
     }
     
     @IBAction func onCancel(sender: AnyObject) {

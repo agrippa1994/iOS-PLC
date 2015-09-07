@@ -15,17 +15,15 @@ enum S7AddressParserError: ErrorType {
     case RangeError
 }
 
-enum S7Type {
-    case E, A, M, DB
-    
+extension S7Area {
     init?(fromString string: String) {
         switch string.uppercaseString {
         case "E":
-            self = .E
+            self = .PE
         case "A":
-            self = .A
+            self = .PA
         case "M":
-            self = .M
+            self = .MK
         case "DB":
             self = .DB
         default:
@@ -34,12 +32,18 @@ enum S7Type {
     }
 }
 
-struct S7Entry {
-    var type: S7Type
-    var bitLength: Int
-    var start: Int
-    var offset: Int?
-    var bitOffset: Int?
+struct S7Address {
+    var type: S7Area
+    var length: S7WordLength
+    var size: Int
+    var dbNumber: Int
+    var offset: Int
+    var bitOffset: Int
+    
+    // Calculate for I/O-Operations
+    var realOffset: Int {
+        return self.length == .Byte ? self.offset : self.offset * 8 + self.bitOffset
+    }
 }
 
 extension String {
@@ -47,7 +51,7 @@ extension String {
         return (self as NSString).substringWithRange(range)
     }
     
-    func toS7Entry() throws -> S7Entry {
+    func toS7Address() throws -> S7Address {
         let patterns = [
             "^(E|A|M)(B|W|D)(\\d+)$",               // EB1000, AW4, MD0
             "^(E|A|M)(\\d+)\\.([0-7])$",            // E5.5, A0.0, M100.2
@@ -72,25 +76,32 @@ extension String {
             }
             
             let match = matches[0]
-            let type = S7Type(fromString: self[match.rangeAtIndex(1)])!
+            guard let type = S7Area(fromString: self[match.rangeAtIndex(1)]) else {
+                throw S7AddressParserError.ParseError
+            }
             
-            let bitLength: Int
+            let length: S7WordLength
+            let size: Int
             switch type {
-            case .E, .A, .M:
+            case .PE, .PA, .MK:
                 switch index {
                 case 0:
                     switch self[match.rangeAtIndex(2)] {
                     case "B":
-                        bitLength = 8
+                        size = 1
+                        length = .Byte
                     case "W":
-                        bitLength = 16
+                        size = 2
+                        length = .Byte
                     case "D":
-                        bitLength = 32
+                        size = 4
+                        length = .Byte
                     default:
                         throw S7AddressParserError.ParseError
                     }
                 case 1:
-                    bitLength = 1
+                    size = 1
+                    length = .Bit
                     
                 default:
                     throw S7AddressParserError.ParseError
@@ -100,50 +111,57 @@ extension String {
                 case 2:
                     switch self[match.rangeAtIndex(3)] {
                     case "B":
-                        bitLength = 8
+                        size = 1
+                        length = .Byte
                     case "W":
-                        bitLength = 16
+                        size = 2
+                        length = .Byte
                     case "D":
-                        bitLength = 32
+                        size = 4
+                        length = .Byte
                     default:
                         throw S7AddressParserError.ParseError
                     }
                 case 3:
-                    bitLength = 1
+                    size = 1
+                    length = .Bit
                 default:
                     throw S7AddressParserError.ParseError
                 }
+            default:
+                throw S7AddressParserError.ParseError
             }
             
-            let start: Int
+            guard let dbNumber = type == .DB ? Int(self[match.rangeAtIndex(2)]) : 0 else {
+                throw S7AddressParserError.ParseError
+            }
+            
+            
+            let offset: Int
             switch index {
             case 0:
-                start = Int(self[match.rangeAtIndex(3)])!
-            default:
-                start = Int(self[match.rangeAtIndex(2)])!
-            }
-            
-            let offset: Int?
-            switch index {
+                offset = Int(self[match.rangeAtIndex(3)])!
+            case 1:
+                offset = Int(self[match.rangeAtIndex(2)])!
             case 2:
                 offset = Int(self[match.rangeAtIndex(4)])!
             case 3:
                 offset = Int(self[match.rangeAtIndex(3)])!
             default:
-                offset = nil
+                offset = 0
             }
             
-            let bitOffset: Int?
+            let bitOffset: Int
             switch index {
             case 1:
                 bitOffset = Int(self[match.rangeAtIndex(3)])!
             case 3:
                 bitOffset = Int(self[match.rangeAtIndex(4)])!
             default:
-                bitOffset = nil
+                bitOffset = 0
             }
             
-            return S7Entry(type: type, bitLength: bitLength, start: start, offset: offset, bitOffset: bitOffset)
+            return S7Address(type: type, length: length, size: size, dbNumber: dbNumber, offset: offset, bitOffset: bitOffset)
         }
         
         throw S7AddressParserError.NoMatches

@@ -9,7 +9,7 @@
 import UIKit
 
 class AddressDetailsTableViewCell: UITableViewCell {
-    var entry: S7Entry? {
+    var address: S7Address? {
         didSet {
             if self.guiLoaded {
                 self.loadDetailsToUI()
@@ -39,25 +39,23 @@ class AddressDetailsTableViewCell: UITableViewCell {
     
     func loadDetailsToUI() {
         self.typeLabel.text = "ADDRESSDETAILSTABLEVIEWCELL_TYPE".localized
-            + ((self.entry == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
-                : "\(self.entry!.type)")
+            + ((self.address == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
+                : "\(self.address!.type)")
         
         self.lengthLabel.text = "ADDRESSDETAILSTABLEVIEWCELL_LENGTH".localized
-            + ((self.entry == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
-                : "\(self.entry!.bitLength)")
+            + ((self.address == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
+                : "\(self.address!.size)")
         
         self.startLabel.text = "ADDRESSDETAILSTABLEVIEWCELL_START".localized
-            + ((self.entry == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
-                : "\(self.entry!.start)")
+            + ((self.address == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
+                : "\(self.address!.dbNumber)")
         
         self.offsetLabel.text = "ADDRESSDETAILSTABLEVIEWCELL_OFFSET".localized
-            + ((self.entry == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
-                : self.entry!.offset == nil ? "ADDRESSDETAILSTABLEVIEWCELL_NONE".localized
-                : "\(self.entry!.offset!)")
+            + ((self.address == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
+                : "\(self.address!.offset)")
         
         self.bitOffsetLabel.text = "ADDRESSDETAILSTABLEVIEWCELL_BITOFFSET".localized
-            + ((self.entry == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
-                : self.entry!.bitOffset == nil ? "ADDRESSDETAILSTABLEVIEWCELL_NONE".localized
-                : "\(self.entry!.bitOffset!)")
+            + ((self.address == nil) ? "ADDRESSDETAILSTABLEVIEWCELL_UNKNOWN".localized
+                : "\(self.address!.bitOffset)")
     }
 }
