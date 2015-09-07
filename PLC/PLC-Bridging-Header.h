@@ -3,3 +3,4 @@
 //
 
 #include "SNAP7/snap7.h"
+#import <ChameleonFramework/Chameleon.h>

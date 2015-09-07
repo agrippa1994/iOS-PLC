@@ -12,7 +12,7 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     var currentAlertController: UIAlertController?
     var client = S7Client()
     
-    @IBAction func onAdd(sender: AnyObject) {
+    @IBAction func onAdd(sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_STATIC".localized, style: .Default) { _ in
             self.addDataEntry(isStatic: true)
@@ -22,7 +22,21 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
             self.addDataEntry(isStatic: false)
         })
         
-        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel) { _ in })
+        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel, handler: nil))
+        
+        alertController.popoverPresentationController?.barButtonItem = sender
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func onMore(sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_MORE_STATISTIC".localized, style: .Default) { _ in
+            
+        })
+        
+        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel, handler: nil))
+        alertController.popoverPresentationController?.barButtonItem = sender
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -32,6 +46,10 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return ChameleonStatusBar.statusBarStyleForColor(self.navigationController!.navigationBar.barTintColor!)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -88,11 +106,16 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         return true
     }
     */
-
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return (section == 0 ? "MAINTABLEVIEWCONTROLLER_STATIC_HEADER_TITLE" : "MAINTABLEVIEWCONTROLLER_DYNAMIC_HEADER_TITLE").localized
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell")!
+        cell.textLabel?.text = (section == 0 ? "MAINTABLEVIEWCONTROLLER_STATIC_HEADER_TITLE" : "MAINTABLEVIEWCONTROLLER_DYNAMIC_HEADER_TITLE").localized
+        return cell
     }
     
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45.0
+    }
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

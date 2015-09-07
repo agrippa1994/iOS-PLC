@@ -41,7 +41,6 @@ class ServerListTableViewController: UITableViewController, EditServerTableViewC
         return self.servers.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ServerCell", forIndexPath: indexPath) 
 
@@ -50,13 +49,16 @@ class ServerListTableViewController: UITableViewController, EditServerTableViewC
 
         return cell
     }
-    
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        defer {
+            CoreData.coreData.save()
+        }
+        
         if editingStyle == .Delete {
             CoreData.coreData.servers.remove(self.servers[indexPath.row])
             self.servers = CoreData.coreData.servers.all()
@@ -65,6 +67,10 @@ class ServerListTableViewController: UITableViewController, EditServerTableViewC
     }
     
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        defer {
+            CoreData.coreData.save()
+        }
+        
         CoreData.coreData.servers.move(fromIndexPath.row, toIndex: toIndexPath.row)
         self.reload()
     }

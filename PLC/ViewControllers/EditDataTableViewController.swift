@@ -13,7 +13,7 @@ import UIKit
     func editDataTableViewControllerDidSave(controller: EditDataTableViewController)
 }
 
-class EditDataTableViewController: UITableViewController, UITextFieldDelegate {
+class EditDataTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var displayTypePickerView: UIPickerView!
@@ -46,6 +46,12 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.nameTextField.delegate = self
+        self.addressTextField.delegate = self
+        
+        self.displayTypePickerView.dataSource = self
+        self.displayTypePickerView.delegate = self
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -53,5 +59,21 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate {
         
         // Open the keyboard
         self.nameTextField.becomeFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 3
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return ["DEC", "HEX", "BIN"][row]
     }
 }
