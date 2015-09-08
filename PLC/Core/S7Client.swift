@@ -17,23 +17,6 @@ enum S7Area: Int32 {
     case TM = 0x1D
 }
 
-enum S7ConnectionType: word {
-    case PG = 1
-    case OP
-    case Basic
-    
-    var localizedString: String {
-        switch self {
-        case .PG:
-            return "S7CONNECTIONTYPE_PG".localized
-        case .OP:
-            return "S7CONNECTIONTYPE_OP".localized
-        case .Basic:
-            return "S7CONNECTIONTYPE_BASIC".localized
-        }
-    }
-}
-
 enum S7WordLength: Int32 {
     case Bit     = 0x01
     case Byte    = 0x02
@@ -95,10 +78,6 @@ class S7Client {
         self.async {
             completion?(Int(Cli_Disconnect(self.object)))
         }
-    }
-    
-    func setConnectionType(type: S7ConnectionType) -> Int32 {
-        return Cli_SetConnectionType(self.object, type.rawValue)
     }
     
     func read<T: S7Convertable>(address: String, defaultValue: T, completion: ((T, Int32) -> Void)?) -> Bool {

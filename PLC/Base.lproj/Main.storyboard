@@ -141,33 +141,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Connection Type" id="Guh-WM-hUc">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="140" id="lSy-ls-2BU">
-                                        <rect key="frame" x="0.0" y="288" width="600" height="140"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lSy-ls-2BU" id="ru2-pG-J6Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLg-6W-VCm">
-                                                    <rect key="frame" x="8" y="8" width="584" height="123"/>
-                                                </pickerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rLg-6W-VCm" firstAttribute="bottom" secondItem="ru2-pG-J6Q" secondAttribute="bottomMargin" id="ArR-sh-1BV"/>
-                                                <constraint firstItem="rLg-6W-VCm" firstAttribute="top" secondItem="ru2-pG-J6Q" secondAttribute="topMargin" id="EY3-yY-nGf"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rLg-6W-VCm" secondAttribute="trailing" id="g5G-Lp-ReJ"/>
-                                                <constraint firstItem="rLg-6W-VCm" firstAttribute="leading" secondItem="ru2-pG-J6Q" secondAttribute="leadingMargin" id="gD1-hB-gkv"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Slot and Rack" id="NeV-ez-HBf">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="Bxn-Dl-NTf">
-                                        <rect key="frame" x="0.0" y="471" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="288" width="600" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bxn-Dl-NTf" id="goc-DR-S8h">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
@@ -218,7 +195,6 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="connectionTypePickerView" destination="rLg-6W-VCm" id="5G2-0L-Pd1"/>
                         <outlet property="hostTextField" destination="zKS-Hr-YjT" id="uxE-tB-33t"/>
                         <outlet property="nameTextField" destination="5TH-RN-hwb" id="HyA-sD-aKk"/>
                         <outlet property="slotRackPickerView" destination="YT0-zo-Zwt" id="4k2-dI-VUU"/>
@@ -428,7 +404,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckI-od-Dni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542" y="-839"/>
+            <point key="canvasLocation" x="2487" y="-839"/>
         </scene>
         <!--S7-Client-->
         <scene sceneID="wn9-bm-pFY">
@@ -601,7 +577,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQE-Wb-ejK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="-839"/>
+            <point key="canvasLocation" x="1667" y="-839"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -14,7 +14,6 @@ import CoreData
 
 extension Server: Indexable {
 
-    @NSManaged var connectionType: Int32
     @NSManaged var host: String?
     @NSManaged var index: Int64
     @NSManaged var name: String?
