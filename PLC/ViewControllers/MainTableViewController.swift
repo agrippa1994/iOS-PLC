@@ -11,21 +11,31 @@ import UIKit
 class MainTableViewController: UITableViewController, ServerListTableViewControllerDelegate, EditDataTableViewControllerDelegate {
     var currentAlertController: UIAlertController?
     var client = S7Client()
+    var currentServer: Server?
+    var dynamicData = [DynamicData]()
+    var staticData = [Data]()
     
     @IBAction func onAdd(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_STATIC".localized, style: .Default) { _ in
+        // When we are not connected to any server...
+        if self.currentServer == nil {
             self.addDataEntry(isStatic: true)
-        })
-        
-        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_DYNAMIC".localized, style: .Default) { _ in
-            self.addDataEntry(isStatic: false)
-        })
-        
-        alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel, handler: nil))
-        
-        alertController.popoverPresentationController?.barButtonItem = sender
-        self.presentViewController(alertController, animated: true, completion: nil)
+        } else {
+            // Otherwise the user can add an address entry for the current server or for all servers (static)
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+            alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_STATIC".localized, style: .Default) { _ in
+                self.addDataEntry(isStatic: true)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_DYNAMIC".localized, style: .Default) { _ in
+                self.addDataEntry(isStatic: false)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel, handler: nil))
+            
+            // Set the bar button item for the popover controller (neccessary for the iPad)
+            alertController.popoverPresentationController?.barButtonItem = sender
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onMore(sender: UIBarButtonItem) {
@@ -36,6 +46,8 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         })
         
         alertController.addAction(UIAlertAction(title: "MAINTABLEVIEWCONTROLLER_ADD_CANCEL".localized, style: .Cancel, handler: nil))
+        
+        // Set the bar button item for the popover controller (neccessary for the iPad)
         alertController.popoverPresentationController?.barButtonItem = sender
         self.presentViewController(alertController, animated: true, completion: nil)
     }
@@ -44,6 +56,9 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Load everything from CoreData to this controller and display all values
+        self.reloadData()
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -51,61 +66,43 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     }
     
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return section == 0 ? self.staticData.count : self.dynamicData.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("BitCell", forIndexPath: indexPath)
 
-        // Configure the cell...
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
+    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
+    
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+        
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell")!
@@ -115,6 +112,10 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45.0
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 140.0
     }
     
     // MARK: - Navigation
@@ -128,6 +129,13 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         if segue.identifier == "EditData" {
             if let ctrl = (segue.destinationViewController as? UINavigationController)?.topViewController as? EditDataTableViewController {
                 ctrl.delegate = self
+                ctrl.server = self.currentServer
+                
+                if let cell = sender as? UITableViewCell {
+                    if let indexPath = self.tableView.indexPathForCell(cell) {
+                        ctrl.data = indexPath.section == 0 ? self.staticData[indexPath.row] : self.dynamicData[indexPath.row]
+                    }
+                }
             }
         }
     }
@@ -166,10 +174,17 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     }
     
     func editDataTableViewControllerDidSave(controller: EditDataTableViewController) {
-        
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        self.reloadData()
     }
     
     func addDataEntry(isStatic isStatic: Bool) {
-        self.performSegueWithIdentifier("EditData", sender: self)
+        self.performSegueWithIdentifier("EditData", sender: nil)
+    }
+    
+    func reloadData() {
+        self.dynamicData = CoreData.coreData.dynamicData.all()
+        self.staticData = CoreData.coreData.staticData.all()
+        self.tableView.reloadData()
     }
 }

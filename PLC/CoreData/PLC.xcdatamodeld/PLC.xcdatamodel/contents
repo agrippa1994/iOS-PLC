@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="14F27" minimumToolsVersion="Automatic">
-    <entity name="Data" representedClassName=".Data" syncable="YES">
+    <entity name="Data" representedClassName="Data" syncable="YES">
         <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="displayType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="index" attributeType="Integer 64" defaultValueString="-1" indexed="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DynamicData" representedClassName="DynamicData" parentEntity="Data" syncable="YES">
         <relationship name="server" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Server" inverseName="data" inverseEntity="Server" syncable="YES"/>
     </entity>
     <entity name="Server" representedClassName="Server" syncable="YES">
@@ -14,10 +16,13 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="rack" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="slot" attributeType="Integer 32" defaultValueString="2" syncable="YES"/>
-        <relationship name="data" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Data" inverseName="server" inverseEntity="Data" syncable="YES"/>
+        <relationship name="data" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DynamicData" inverseName="server" inverseEntity="DynamicData" syncable="YES"/>
     </entity>
+    <entity name="StaticData" representedClassName="StaticData" parentEntity="Data" syncable="YES"/>
     <elements>
-        <element name="Data" positionX="-54" positionY="-17" width="128" height="118"/>
-        <element name="Server" positionX="-380" positionY="-135" width="128" height="148"/>
+        <element name="Data" positionX="-63" positionY="-94" width="128" height="103"/>
+        <element name="DynamicData" positionX="-162" positionY="62" width="128" height="58"/>
+        <element name="Server" positionX="-380" positionY="-247" width="128" height="148"/>
+        <element name="StaticData" positionX="25" positionY="65" width="128" height="43"/>
     </elements>
 </model>

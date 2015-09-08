@@ -1,5 +1,5 @@
 //
-//  Data+CoreDataProperties.swift
+//  StaticData+CoreDataProperties.swift
 //  PLC
 //
 //  Created by Manuel Stampfl on 08.09.15.
@@ -12,11 +12,7 @@
 import Foundation
 import CoreData
 
-extension Data: Indexable {
+extension StaticData {
 
-    @NSManaged var address: String?
-    @NSManaged var displayType: Int32
-    @NSManaged var index: Int64
-    @NSManaged var name: String?
 
 }

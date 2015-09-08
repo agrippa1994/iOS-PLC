@@ -20,6 +20,8 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate, U
     
     weak var delegate: EditDataTableViewControllerDelegate?
     var address: S7Address?
+    var data: Data?
+    var server: Server?
     
     @IBAction func textFieldValueChanged(sender: UITextField) {
         // Parse the input to an entry for S7
@@ -30,7 +32,7 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate, U
         }
       
         // Set the text's color to red if the input is invalid otherwise to green
-        sender.textColor =  self.address == nil ? UIColor.redColor() : UIColor.greenColor()
+        sender.textColor =  self.address == nil ? UIColor.flatRedColorDark() : UIColor.flatGreenColorDark()
         
         // Update the details
         (self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1)) as! AddressDetailsTableViewCell).address = self.address
@@ -41,7 +43,53 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate, U
     }
     
     @IBAction func onSave(sender: AnyObject) {
+        // Update address details view
+        self.textFieldValueChanged(self.addressTextField)
+        if self.address == nil {
+            let ctrl = UIAlertController(title: "Info", message: "EDITDATATABLEVIEWCONTROLLER_INVALID_ADDRESS".localized, preferredStyle: .Alert)
+            ctrl.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            return self.presentViewController(ctrl, animated: true, completion: nil)
+        }
         
+        guard let name = self.nameTextField.text else {
+            let ctrl = UIAlertController(title: "Info", message: "EDITDATATABLEVIEWCONTROLLER_INVALID_NAME".localized, preferredStyle: .Alert)
+            ctrl.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            return self.presentViewController(ctrl, animated: true, completion: nil)
+        }
+        
+        if name.isEmpty {
+            let ctrl = UIAlertController(title: "Info", message: "EDITDATATABLEVIEWCONTROLLER_INVALID_NAME".localized, preferredStyle: .Alert)
+            ctrl.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(ctrl, animated: true, completion: nil)
+            return
+        }
+        
+        let isDynamicEntry = self.server != nil
+        if isDynamicEntry && (self.server == nil || !(self.data is DynamicData)) {
+            let ctrl = UIAlertController(title: "Info", message: "EDITDATATABLEVIEWCONTROLLER_INTERNAL_ERROR".localized, preferredStyle: .Alert)
+            ctrl.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(ctrl, animated: true, completion: nil)
+            return
+        }
+        
+        // Create new CoreData object if neccessary
+        self.data = self.data == nil
+            ? isDynamicEntry ? CoreData.coreData.dynamicData.create(true)! : CoreData.coreData.staticData.create(true)! as Data
+            : self.data
+        
+        self.data!.address = self.addressTextField!.text
+        self.data!.displayType = Int32(self.displayTypePickerView.selectedRowInComponent(0))
+        self.data!.name = name
+        
+        if isDynamicEntry && self.server != nil {
+            (self.data as! DynamicData).server = self.server
+        }
+        
+        // Save
+        CoreData.coreData.save()
+        
+        // Notify the delegate
+        self.delegate?.editDataTableViewControllerDidSave(self)
     }
     
     override func viewDidLoad() {
@@ -54,6 +102,16 @@ class EditDataTableViewController: UITableViewController, UITextFieldDelegate, U
         self.displayTypePickerView.delegate = self
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Load data into the UI
+        if self.data != nil {
+            self.nameTextField.text = self.data!.name
+            self.addressTextField.text = self.data!.address
+            self.displayTypePickerView.selectRow(Int(self.data!.displayType), inComponent: 0, animated: false)
+        }
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

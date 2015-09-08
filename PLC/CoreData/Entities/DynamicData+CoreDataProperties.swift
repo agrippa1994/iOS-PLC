@@ -1,5 +1,5 @@
 //
-//  Data+CoreDataProperties.swift
+//  DynamicData+CoreDataProperties.swift
 //  PLC
 //
 //  Created by Manuel Stampfl on 08.09.15.
@@ -12,11 +12,8 @@
 import Foundation
 import CoreData
 
-extension Data: Indexable {
+extension DynamicData {
 
-    @NSManaged var address: String?
-    @NSManaged var displayType: Int32
-    @NSManaged var index: Int64
-    @NSManaged var name: String?
+    @NSManaged var server: Server?
 
 }

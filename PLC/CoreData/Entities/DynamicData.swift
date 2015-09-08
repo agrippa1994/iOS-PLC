@@ -1,5 +1,5 @@
 //
-//  Data.swift
+//  DynamicData.swift
 //  PLC
 //
 //  Created by Manuel Stampfl on 08.09.15.
@@ -9,8 +9,8 @@
 import Foundation
 import CoreData
 
-@objc(Data)
-class Data: NSManagedObject {
+@objc(DynamicData)
+class DynamicData: Data {
 
 // Insert code here to add functionality to your managed object subclass
 
