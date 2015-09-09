@@ -25,7 +25,6 @@ class ServerListTableViewController: UITableViewController, EditServerTableViewC
         super.viewDidLoad()
 
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationController?.setToolbarHidden(false, animated: false)
     }
     
     override func viewWillAppear(animated: Bool) {

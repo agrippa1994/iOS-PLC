@@ -75,10 +75,31 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BitCell", forIndexPath: indexPath)
+        if indexPath.section == 0 {
+            let data = self.staticData[indexPath.row]
+            guard let address = (try? data.address?.toS7Address()) else {
+                return UITableViewCell()
+            }
+            
+            if address?.length == .Bit {
+                let cell = tableView.dequeueReusableCellWithIdentifier("BitCell", forIndexPath: indexPath) as! BitTableViewCell
+                cell.nameLabel.text = data.name
+                cell.addressLabel.text = data.address
+                
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCellWithIdentifier("ValueCell", forIndexPath: indexPath) as! ValueTableViewCell
+                cell.nameLabel.text = data.name
+                cell.addressLabel.text = data.address
+                cell.valueLabel.text = ""
+                
+                return cell
+            }
+        }
+        
 
 
-        return cell
+        return UITableViewCell()
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -103,19 +124,15 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         return true
     }
     
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell")!
-        cell.textLabel?.text = (section == 0 ? "MAINTABLEVIEWCONTROLLER_STATIC_HEADER_TITLE" : "MAINTABLEVIEWCONTROLLER_DYNAMIC_HEADER_TITLE").localized
-        return cell
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return (section == 0 ? "MAINTABLEVIEWCONTROLLER_STATIC_HEADER_TITLE" : "MAINTABLEVIEWCONTROLLER_DYNAMIC_HEADER_TITLE").localized
     }
-    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45.0
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 140.0
+        return 75.0
     }
     
     // MARK: - Navigation
@@ -140,7 +157,6 @@ class MainTableViewController: UITableViewController, ServerListTableViewControl
         }
     }
 
-    
     func serverListTableViewControllerServerChosen(controller: ServerListTableViewController, server: Server) {
         controller.dismissViewControllerAnimated(true, completion: nil)
         
