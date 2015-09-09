@@ -428,6 +428,8 @@ int TMsgSocket::SckConnect()
 int TMsgSocket::SckConnect()
 {
     int Result;
+    struct timeval timeout;
+    
     SetSin(RemoteSin, RemoteAddress, RemotePort);
     if (LastTcpError==0)
     {
@@ -436,6 +438,12 @@ int TMsgSocket::SckConnect()
             CreateSocket();
             if (LastTcpError==0)
             {
+                timeout.tv_sec = 5;
+                timeout.tv_usec = 0;
+                
+                setsockopt(FSocket, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(timeout));
+                setsockopt(FSocket, SOL_SOCKET, SO_SNDTIMEO, (char *)&timeout, sizeof(timeout));
+                
                 Result=connect(FSocket, (struct sockaddr*)&RemoteSin, sizeof(RemoteSin));
                 if (SockCheck(Result)==0)
                 {
